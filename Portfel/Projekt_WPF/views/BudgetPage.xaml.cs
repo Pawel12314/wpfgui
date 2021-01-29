@@ -1,4 +1,5 @@
 ﻿using Projekt_WPF.models;
+using Projekt_WPF.models.patterns.factoryMethodEntry;
 using Projekt_WPF.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -36,10 +37,10 @@ namespace Projekt_WPF.views
 
         private void addWishButton_Click(object sender, RoutedEventArgs e)
         {
-            var aww = new AddWishWindow(vm);
+            var aww = new AddWishWindow(vm,new WishFactory());
             aww.Show();
         }
-        public void addWish(Wish w)
+        public void addWish(Entry w)
         {
             vm.wishes.Add(w);
             definedWishesListBox.Items.Refresh();

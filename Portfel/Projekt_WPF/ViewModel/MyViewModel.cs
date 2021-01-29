@@ -30,7 +30,7 @@ namespace Projekt_WPF.ViewModel
         [XmlArray]
         [XmlArrayItem(typeof(Wish))]
 
-        public ObservableCollection<Wish> wishes { get; set; }
+        public ObservableCollection<Entry> wishes { get; set; }
 
   
 
@@ -66,6 +66,34 @@ namespace Projekt_WPF.ViewModel
             s.Serialize(writer, this);
             writer.Close();
         }
+        private ObservableCollection<Entry> addCateogryReference(List<Entry>items, ObservableCollection<Category> categories)
+        {
+            int catIndex = 0;
+            ObservableCollection<Entry> entries = new ObservableCollection<Entry>();
+            for (int ItemIndex = 0; ItemIndex < this.entries.Count; ItemIndex++)
+            {
+
+                if (categories[catIndex].id > items[ItemIndex].categoryID)
+                {
+                    ItemIndex++;
+                }
+                else
+                if (categories[catIndex].id == items[ItemIndex].categoryID)
+                {
+                    Entry ent = this.entries[ItemIndex];
+                    ent.category = this.categories[catIndex];
+                    entries.Add(ent);
+                    ItemIndex++;
+                }
+                else
+                if (categories[catIndex].id < items[ItemIndex].categoryID)
+                {
+                    catIndex++;
+                }
+
+            }
+            return entries;
+        }
         public void deserialize(string filename)
         {
             FileStream fs = new FileStream(filename, FileMode.Open);
@@ -76,33 +104,11 @@ namespace Projekt_WPF.ViewModel
 
 
             this.categories = mvm.categories;
-            List<Entry> entries = mvm.entries.OrderBy(elem=>elem.categoryID).ToList();
-            int catIndex = 0;
-            this.entries = new ObservableCollection<Entry>();
-            for(int entryIndex=0;entryIndex<entries.Count;entryIndex++)
-            {
+            this.entries = this.addCateogryReference(mvm.entries.OrderBy(item=>item.categoryID).ToList(),mvm.categories);
+            this.wishes = this.addCateogryReference(mvm.wishes.OrderBy(item=>item.categoryID).ToList(),mvm.categories);
 
-                if(this.categories[catIndex].id>entries[entryIndex].categoryID)
-                {
-                    entryIndex++;
-                }
-                else
-                if (this.categories[catIndex].id == entries[entryIndex].categoryID)
-                {
-                    Entry ent = entries[entryIndex];
-                    ent.category = this.categories[catIndex];
-                    this.entries.Add(ent);
-                    entryIndex++;
-                }
-                else
-                if (this.categories[catIndex].id < entries[entryIndex].categoryID)
-                {
-                    catIndex++;
-                }
-
-            }
             this.summaryList = mvm.summaryList;
-            this.wishes = mvm.wishes;
+            //this.wishes = mvm.wishes;
             
         }
         

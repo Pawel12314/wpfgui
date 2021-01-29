@@ -97,6 +97,15 @@
     <Compile Include="models\Element.cs" />
     <Compile Include="models\Category.cs" />
     <Compile Include="models\Income.cs" />
+    <Compile Include="models\patterns\Decorator\CategoryEmptyDecorated.cs" />
+    <Compile Include="models\patterns\Decorator\EntryCategory.cs" />
+    <Compile Include="models\patterns\Decorator\ICategory.cs" />
+    <Compile Include="models\patterns\Decorator\ICategoryBase.cs" />
+    <Compile Include="models\patterns\Decorator\WishCategory.cs" />
+    <Compile Include="models\patterns\factoryMethodEntry\IEntryFactory.cs" />
+    <Compile Include="models\patterns\factoryMethodEntry\IncomeFactory.cs" />
+    <Compile Include="models\patterns\factoryMethodEntry\OutcomeFactory.cs" />
+    <Compile Include="models\patterns\factoryMethodEntry\WishFactory.cs" />
     <Compile Include="models\range\implementedValue.cs" />
     <Compile Include="models\range\Range.cs" />
     <Compile Include="models\range\UnimplementedValue.cs" />

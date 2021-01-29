@@ -1,5 +1,8 @@
 ﻿using NodaTime;
 using Projekt_WPF.models;
+using Projekt_WPF.models.patterns.CategoryClass;
+using Projekt_WPF.models.patterns.Decorator;
+using Projekt_WPF.models.patterns.factoryMethodEntry;
 using Projekt_WPF.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -24,9 +27,12 @@ namespace Projekt_WPF.views
     /// </summary>
     public partial class AddWishWindow : Window
     {
+
+        private IEntryFactory entryFactory { get; set; }
         private MyViewModel viewModel { get; set; }
-        public AddWishWindow(MyViewModel vm)
+        public AddWishWindow(MyViewModel vm, IEntryFactory entryFactory)
         {
+            this.entryFactory = entryFactory;
             this.viewModel = vm;
             InitializeComponent();
         }
@@ -42,7 +48,7 @@ namespace Projekt_WPF.views
 
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
-            Wish wish;
+            Entry wish;
             WishDate wishdate;
             LocalDate begin = new LocalDate();
             
@@ -98,9 +104,13 @@ namespace Projekt_WPF.views
                 MessageBox.Show("nie wybrano kategorii");
                 return;
             }
+
             Category category = (Category)categoryCombobox.SelectedItem;
-            wish = new Wish(name, amount,ref category, freq,begin, duration, description);
-            ((BudgetPage)((MainWindow)Application.Current.MainWindow).mainWindowFrame.Content).addWish(wish);
+            ICategory ICat = new EntryCategory(ref category, new CategoryEmptyDecorated());
+            wish = entryFactory.createEntry(name, amount, description, ICat, begin, duration);
+            //wish = new entryfa(name, amount,ref category, freq,begin, duration, description);
+            entryFactory.addElement(wish, (MainWindow)Application.Current.MainWindow);
+            //((BudgetPage)((MainWindow)Application.Current.MainWindow).mainWindowFrame.Content).addWish(wish);
             this.Close();
         }
 

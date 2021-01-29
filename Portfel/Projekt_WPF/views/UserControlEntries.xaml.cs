@@ -1,6 +1,7 @@
 ﻿using NodaTime;
 using Projekt_WPF.commands;
 using Projekt_WPF.models;
+using Projekt_WPF.models.patterns.factoryMethodEntry;
 using Projekt_WPF.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -43,7 +44,8 @@ namespace Projekt_WPF.views
         }
         public void newEntryCmd()
         {
-            var temp = new WindowNewEntry(vm);
+            //var temp = new WindowNewEntry(vm);
+            var temp = new AddWishWindow(vm, new IncomeFactory());
             temp.ShowDialog();
         }
         public void editEntryCmd()
@@ -70,7 +72,7 @@ namespace Projekt_WPF.views
         }
         private void addNewEntryButton_Click(object sender, RoutedEventArgs e)
         {
-            var temp = new WindowNewEntry(vm);
+            var temp = new AddWishWindow(vm, new IncomeFactory());
             temp.Show();
         }
         public void dodajWpis(Entry wpis)
