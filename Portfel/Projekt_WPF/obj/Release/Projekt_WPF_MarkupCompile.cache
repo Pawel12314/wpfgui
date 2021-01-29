@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Geoff\source\repos\WPF_newgui\28_1_21\WPF2\Portfel\Projekt_WPF\obj\Release\
+C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\
 Projekt_WPF
 none
 false
 TRACE
-C:\Users\Geoff\source\repos\WPF_newgui\28_1_21\WPF2\Portfel\Projekt_WPF\App.xaml
+C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\App.xaml
 15-169363117
 
 461302880751
-25-1239892201
+25617735944
 controls\SummaryEntry.xaml;MainWindow.xaml;views\AddWishWindow.xaml;views\BudgetPage.xaml;views\SummareCreatePage.xaml;views\SummaryPage.xaml;views\UserControlCategories.xaml;views\UserControlPersonalize.xaml;views\UserControlEntries.xaml;views\UserControlStartScreen.xaml;views\UserControlSummary.xaml;views\WindowEditCategory.xaml;views\WindowEditEntry.xaml;views\WindowNewCategory.xaml;views\WindowNewEntry.xaml;
 
 False

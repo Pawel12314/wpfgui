@@ -182,11 +182,11 @@ namespace Projekt_WPF.views
                 freq = Frequency.jednorazowy;
                 if (incomeRadioButton.IsChecked == true)
                 {
-                    wpis = new Income(name, Convert.ToDecimal(amountString), sCategory, freq, beginDate, 0, desc);
+                    wpis = new Income(name, Convert.ToDecimal(amountString), ref sCategory, freq, beginDate, 0, desc);
                 }
                 else
                 {
-                    wpis = new Outcome(name, Convert.ToDecimal(amountString), sCategory, freq, beginDate, 0, desc);
+                    wpis = new Outcome(name, Convert.ToDecimal(amountString),ref  sCategory, freq, beginDate, 0, desc);
                 }
                 ((UserControlEntries)((MainWindow)Application.Current.MainWindow).mainWindowFrame.Content).edytujWpis(editedEntry, wpis);
                 this.Close();
@@ -215,11 +215,11 @@ namespace Projekt_WPF.views
 
                         if (incomeRadioButton.IsChecked == true)
                         {
-                            wpis = new Income(name, Convert.ToDecimal(amountString), sCategory, freq, beginDate, Convert.ToInt32(lengthString), desc);
+                            wpis = new Income(name, Convert.ToDecimal(amountString), ref sCategory, freq, beginDate, Convert.ToInt32(lengthString), desc);
                         }
                         else
                         {
-                            wpis = new Outcome(name, Convert.ToDecimal(amountString), sCategory, freq, beginDate, Convert.ToInt32(lengthString), desc);
+                            wpis = new Outcome(name, Convert.ToDecimal(amountString), ref sCategory, freq, beginDate, Convert.ToInt32(lengthString), desc);
                         }
                         ((UserControlEntries)((MainWindow)Application.Current.MainWindow).mainWindowFrame.Content).edytujWpis(editedEntry, wpis);
                         this.Close();
@@ -240,11 +240,11 @@ namespace Projekt_WPF.views
                     {
                         if (incomeRadioButton.IsChecked == true)
                         {
-                            wpis = new Income(name, Convert.ToDecimal(amountString), sCategory, freq, beginDate, lengthInMonths, desc);
+                            wpis = new Income(name, Convert.ToDecimal(amountString),ref sCategory, freq, beginDate, lengthInMonths, desc);
                         }
                         else
                         {
-                            wpis = new Outcome(name, Convert.ToDecimal(amountString), sCategory, freq, beginDate, lengthInMonths, desc);
+                            wpis = new Outcome(name, Convert.ToDecimal(amountString),ref sCategory, freq, beginDate, lengthInMonths, desc);
                         }
                         ((UserControlEntries)((MainWindow)Application.Current.MainWindow).mainWindowFrame.Content).edytujWpis(editedEntry, wpis);
                         this.Close();

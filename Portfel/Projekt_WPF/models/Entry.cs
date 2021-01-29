@@ -23,7 +23,9 @@ namespace Projekt_WPF.models
         public LocalDate begin { get; set; }
         public LocalDate end { get; set; }
         public int duration { get; set; }
+        public int categoryID { get; set; }
         public Category category { get; set; }
+        
         public string description { get; set; }
         static Entry()
         {
@@ -33,7 +35,7 @@ namespace Projekt_WPF.models
         {
 
         }
-        public Entry(string name,decimal amount, Category category, Frequency frequency, LocalDate begin, int duration = 0, string desc="")
+        public Entry(string name,decimal amount, ref Category category, Frequency frequency, LocalDate begin, int duration = 0, string desc="")
         {
             this.name = name;
             this.amount = amount;
@@ -42,6 +44,7 @@ namespace Projekt_WPF.models
             this.begin = begin;
             this.duration = duration;
             this.description = desc;
+            this.categoryID = category.id;
             if (duration == 0) this.frequency = Frequency.jednorazowy;
             this.end = begin.PlusMonths(duration);
             this.id = ++maxID;

@@ -99,7 +99,7 @@ namespace Projekt_WPF.views
                 return;
             }
             Category category = (Category)categoryCombobox.SelectedItem;
-            wish = new Wish(name, amount, category, freq,begin, duration, description);
+            wish = new Wish(name, amount,ref category, freq,begin, duration, description);
             ((BudgetPage)((MainWindow)Application.Current.MainWindow).mainWindowFrame.Content).addWish(wish);
             this.Close();
         }

@@ -15,7 +15,7 @@ namespace Projekt_WPF.models
     public class Wish : Entry
     {
         public WishDate wishDate;
-        public Wish(string name, decimal amount, Category category, Frequency frequency, LocalDate begin, int duration = 0, string desc = "") : base(name, amount, category, frequency, begin, duration, desc)
+        public Wish(string name, decimal amount,ref  Category category, Frequency frequency, LocalDate begin, int duration = 0, string desc = "") : base(name, amount,ref category, frequency, begin, duration, desc)
         {
             //this.wishDate = when;
         }

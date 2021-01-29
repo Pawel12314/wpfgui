@@ -76,9 +76,34 @@ namespace Projekt_WPF.ViewModel
 
 
             this.categories = mvm.categories;
-            this.entries = mvm.entries;
+            List<Entry> entries = mvm.entries.OrderBy(elem=>elem.categoryID).ToList();
+            int catIndex = 0;
+            this.entries = new ObservableCollection<Entry>();
+            for(int entryIndex=0;entryIndex<entries.Count;entryIndex++)
+            {
+
+                if(this.categories[catIndex].id>entries[entryIndex].categoryID)
+                {
+                    entryIndex++;
+                }
+                else
+                if (this.categories[catIndex].id == entries[entryIndex].categoryID)
+                {
+                    Entry ent = entries[entryIndex];
+                    ent.category = this.categories[catIndex];
+                    this.entries.Add(ent);
+                    entryIndex++;
+                }
+                else
+                if (this.categories[catIndex].id < entries[entryIndex].categoryID)
+                {
+                    catIndex++;
+                }
+
+            }
             this.summaryList = mvm.summaryList;
             this.wishes = mvm.wishes;
+            
         }
         
     }
