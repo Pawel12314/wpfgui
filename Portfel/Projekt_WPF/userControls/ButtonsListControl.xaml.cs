@@ -61,7 +61,7 @@ namespace Projekt_WPF.userControls
 
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty EditPropertyProperty =
-            DependencyProperty.Register("EditProperty", typeof(ICommand), typeof(ButtonsListControl), , new FrameworkPropertyMetadata(new CommandTemplate(
+            DependencyProperty.Register("EditProperty", typeof(ICommand), typeof(ButtonsListControl), new FrameworkPropertyMetadata(new CommandTemplate(
                o => Print(),
                o => true
                )
@@ -77,7 +77,7 @@ namespace Projekt_WPF.userControls
 
         // Using a DependencyProperty as the backing store for DeleteProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty DeletePropertyProperty =
-            DependencyProperty.Register("DeleteProperty", typeof(ICommand), typeof(ButtonsListControl), , new FrameworkPropertyMetadata(new CommandTemplate(
+            DependencyProperty.Register("DeleteProperty", typeof(ICommand), typeof(ButtonsListControl), new FrameworkPropertyMetadata(new CommandTemplate(
                o => Print(),
                o => true
                )

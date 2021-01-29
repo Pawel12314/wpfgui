@@ -11,8 +11,14 @@
              
       >
     <Grid x:Name="mainGrid" Background="GhostWhite">
+        <StackPanel>
+            <mycontrols:DiagramControl>
+                
+            </mycontrols:DiagramControl>
+        
         <mycontrols:ButtonsListControl x:Name="menu" AddProperty="{Binding addCommand}"  MyWidthProperty="300" MyHeightProperty="100" OrientationProperty="Horizontal">
             
         </mycontrols:ButtonsListControl>
+        </StackPanel>
     </Grid>
 </Page>
