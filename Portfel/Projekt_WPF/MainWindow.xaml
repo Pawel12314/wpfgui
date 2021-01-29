@@ -1,0 +1,80 @@
+﻿<Window x:Class="Projekt_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_WPF"
+        mc:Ignorable="d"
+        Title="Portfel - projekt WPF" x:Name="mainWindow"
+        
+        
+        WindowState="Maximized"
+        >
+    <Grid x:Name="mainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0">
+            <Menu>
+                <MenuItem Header="Plik">
+                    <MenuItem x:Name="menuNewFile" Header="Nowy" Click="MenuNewFile_Click">
+                        <MenuItem.Icon>
+                            <Image Source="icons/NewFile_16x.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="menuOpenFile" Header="Otwórz..." Click="menuOpenFile_Click">
+                        <MenuItem.Icon>
+                            <Image Source="icons/ImportFile_16x.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="menuSaveFile" Header="Zapisz" Click="menuSaveFile_Click">
+                        <MenuItem.Icon>
+                            <Image Source="icons/Save_16x.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="menuSaveFileAs" Header="Zapisz jako..." Click="menuSaveFileAs_Click">
+                        <MenuItem.Icon>
+                            <Image Source="icons/Save_16x.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem x:Name="menuClose" Header="Zamknij" Click="menuClose_Click">
+                        <MenuItem.Icon>
+                            <Image Source="icons/Close_12x_16x.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Widok">
+                    <MenuItem x:Name="menuItemViewStartScreen" Header="Ekran startowy" Click="menuItemViewStartScreen_Click"></MenuItem>
+                    <MenuItem x:Name="menuItemViewCategories" Header="Kategorie" Click="menuItemViewCategories_Click"></MenuItem>
+                    <Separator/>
+                    <MenuItem x:Name="menuItemViewEntries" Header="Dodawanie i edycja wpisów" Click="menuItemViewEntries_Click"></MenuItem>
+                    <Separator/>
+                    <MenuItem x:Name="menuItemViewSummary" Header="Podsumowanie" Click="menuItemViewSummary_Click"></MenuItem>
+                    <MenuItem x:Name="menuItemViewSummary2" Header="Podsumowanie2" Click="menuItemViewSummary_Click2"></MenuItem>
+                    <MenuItem x:Name="menuITemBudget" Header="budżet" Click="menuITemBudget_Click"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Opcje">
+                    <MenuItem x:Name="menuItemViewPersonalization" Header="Personalizacja" Click="menuItemViewPersonalization_Click"></MenuItem>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <!---
+        <StackPanel Grid.Row="1">
+            <TextBlock>lista podsumowań</TextBlock>
+            <ListBox Name="listBoxSummary" ScrollViewer.HorizontalScrollBarVisibility="Disabled" MaxWidth="500"  SelectionChanged="openSummary">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel IsItemsHost="True" />
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+        </StackPanel>
+        -->
+        <Frame x:Name="mainWindowFrame" Grid.Row="2" NavigationUIVisibility="Hidden" MinHeight="100" MinWidth="100">
+            
+        </Frame>
+    </Grid>
+</Window>

@@ -1,0 +1,30 @@
+{
+  "$type": "System.Collections.Generic.List`1[[Projekt_WPF.models.Category, Projekt_WPF]], mscorlib",
+  "$values": [
+    {
+      "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+      "name": "praca",
+      "id": 1
+    },
+    {
+      "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+      "name": "mieszkanie",
+      "id": 2
+    },
+    {
+      "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+      "name": "rachunki",
+      "id": 3
+    },
+    {
+      "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+      "name": "spożywka",
+      "id": 11
+    },
+    {
+      "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+      "name": "okazjonalne",
+      "id": 12
+    }
+  ]
+}

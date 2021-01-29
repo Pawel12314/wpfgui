@@ -1,0 +1,319 @@
+{
+  "$type": "System.Collections.Generic.List`1[[Projekt_WPF.models.Summary, Projekt_WPF]], mscorlib",
+  "$values": [
+    {
+      "$type": "Projekt_WPF.models.Summary, Projekt_WPF",
+      "priceRange": null,
+      "begin": "0001-01-01",
+      "end": "0001-01-01",
+      "income_summary": {
+        "$type": "System.Collections.Generic.List`1[[Projekt_WPF.models.SummaryItemEntry, Projekt_WPF]], mscorlib",
+        "$values": [
+          {
+            "$type": "Projekt_WPF.models.SummaryItemEntry, Projekt_WPF",
+            "el": {
+              "$type": "Projekt_WPF.models.Income, Projekt_WPF",
+              "type": 0,
+              "name": "poczta",
+              "frequency": 1,
+              "amount": 2137.0,
+              "begin": "2021-01-10",
+              "end": "2024-01-10",
+              "duration": 36,
+              "category": {
+                "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+                "name": "praca",
+                "id": 1
+              },
+              "description": "wynagrodzenie",
+              "id": 6
+            },
+            "amount": 0.0
+          },
+          {
+            "$type": "Projekt_WPF.models.SummaryItemEntry, Projekt_WPF",
+            "el": {
+              "$type": "Projekt_WPF.models.Income, Projekt_WPF",
+              "type": 0,
+              "name": "UBER",
+              "frequency": 0,
+              "amount": 140.0,
+              "begin": "2021-01-11",
+              "end": "2021-01-11",
+              "duration": 0,
+              "category": {
+                "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+                "name": "praca",
+                "id": 1
+              },
+              "description": "3h jazdy",
+              "id": 5
+            },
+            "amount": 0.0
+          }
+        ]
+      },
+      "outcome_summary": {
+        "$type": "System.Collections.Generic.List`1[[Projekt_WPF.models.SummaryItemEntry, Projekt_WPF]], mscorlib",
+        "$values": [
+          {
+            "$type": "Projekt_WPF.models.SummaryItemEntry, Projekt_WPF",
+            "el": {
+              "$type": "Projekt_WPF.models.Outcome, Projekt_WPF",
+              "type": 1,
+              "name": "paliwo",
+              "frequency": 0,
+              "amount": 50.0,
+              "begin": "2021-01-11",
+              "end": "2021-01-11",
+              "duration": 0,
+              "category": {
+                "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+                "name": "praca",
+                "id": 1
+              },
+              "description": "na UBERa",
+              "id": 5
+            },
+            "amount": 0.0
+          }
+        ]
+      },
+      "incomeCategory_summary": {
+        "$type": "System.Collections.Generic.List`1[[Projekt_WPF.models.SummaryItemCategory, Projekt_WPF]], mscorlib",
+        "$values": [
+          {
+            "$type": "Projekt_WPF.models.SummaryItemCategory, Projekt_WPF",
+            "el": {
+              "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+              "name": "praca",
+              "id": 1
+            },
+            "amount": 0.0
+          }
+        ]
+      },
+      "outncomeCategory_summary": {
+        "$type": "System.Collections.Generic.List`1[[Projekt_WPF.models.SummaryItemCategory, Projekt_WPF]], mscorlib",
+        "$values": []
+      },
+      "summTypes": null,
+      "maxsingle": 0.0,
+      "maxcategory": 0.0,
+      "name": "podsumowanie nr: 1",
+      "id": 1
+    },
+    {
+      "$type": "Projekt_WPF.models.Summary, Projekt_WPF",
+      "priceRange": null,
+      "begin": "0001-01-01",
+      "end": "0001-01-01",
+      "income_summary": {
+        "$type": "System.Collections.Generic.List`1[[Projekt_WPF.models.SummaryItemEntry, Projekt_WPF]], mscorlib",
+        "$values": [
+          {
+            "$type": "Projekt_WPF.models.SummaryItemEntry, Projekt_WPF",
+            "el": {
+              "$type": "Projekt_WPF.models.Income, Projekt_WPF",
+              "type": 0,
+              "name": "poczta",
+              "frequency": 1,
+              "amount": 2137.0,
+              "begin": "2021-01-10",
+              "end": "2024-01-10",
+              "duration": 36,
+              "category": {
+                "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+                "name": "praca",
+                "id": 1
+              },
+              "description": "wynagrodzenie",
+              "id": 6
+            },
+            "amount": 0.0
+          },
+          {
+            "$type": "Projekt_WPF.models.SummaryItemEntry, Projekt_WPF",
+            "el": {
+              "$type": "Projekt_WPF.models.Income, Projekt_WPF",
+              "type": 0,
+              "name": "UBER",
+              "frequency": 0,
+              "amount": 140.0,
+              "begin": "2021-01-11",
+              "end": "2021-01-11",
+              "duration": 0,
+              "category": {
+                "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+                "name": "praca",
+                "id": 1
+              },
+              "description": "3h jazdy",
+              "id": 5
+            },
+            "amount": 0.0
+          }
+        ]
+      },
+      "outcome_summary": {
+        "$type": "System.Collections.Generic.List`1[[Projekt_WPF.models.SummaryItemEntry, Projekt_WPF]], mscorlib",
+        "$values": [
+          {
+            "$type": "Projekt_WPF.models.SummaryItemEntry, Projekt_WPF",
+            "el": {
+              "$type": "Projekt_WPF.models.Outcome, Projekt_WPF",
+              "type": 1,
+              "name": "paliwo",
+              "frequency": 0,
+              "amount": 50.0,
+              "begin": "2021-01-11",
+              "end": "2021-01-11",
+              "duration": 0,
+              "category": {
+                "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+                "name": "praca",
+                "id": 1
+              },
+              "description": "na UBERa",
+              "id": 5
+            },
+            "amount": 0.0
+          }
+        ]
+      },
+      "incomeCategory_summary": {
+        "$type": "System.Collections.Generic.List`1[[Projekt_WPF.models.SummaryItemCategory, Projekt_WPF]], mscorlib",
+        "$values": [
+          {
+            "$type": "Projekt_WPF.models.SummaryItemCategory, Projekt_WPF",
+            "el": {
+              "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+              "name": "praca",
+              "id": 1
+            },
+            "amount": 0.0
+          }
+        ]
+      },
+      "outncomeCategory_summary": {
+        "$type": "System.Collections.Generic.List`1[[Projekt_WPF.models.SummaryItemCategory, Projekt_WPF]], mscorlib",
+        "$values": []
+      },
+      "summTypes": null,
+      "maxsingle": 0.0,
+      "maxcategory": 0.0,
+      "name": "podsumowanie nr: 2",
+      "id": 2
+    },
+    {
+      "$type": "Projekt_WPF.models.Summary, Projekt_WPF",
+      "priceRange": null,
+      "begin": "0001-01-01",
+      "end": "0001-01-01",
+      "income_summary": {
+        "$type": "System.Collections.Generic.List`1[[Projekt_WPF.models.SummaryItemEntry, Projekt_WPF]], mscorlib",
+        "$values": []
+      },
+      "outcome_summary": {
+        "$type": "System.Collections.Generic.List`1[[Projekt_WPF.models.SummaryItemEntry, Projekt_WPF]], mscorlib",
+        "$values": [
+          {
+            "$type": "Projekt_WPF.models.SummaryItemEntry, Projekt_WPF",
+            "el": {
+              "$type": "Projekt_WPF.models.Outcome, Projekt_WPF",
+              "type": 1,
+              "name": "czynsz",
+              "frequency": 1,
+              "amount": 666.90,
+              "begin": "2021-01-01",
+              "end": "2026-01-01",
+              "duration": 60,
+              "category": {
+                "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+                "name": "mieszkanie",
+                "id": 2
+              },
+              "description": "czynsz + woda + śmieci",
+              "id": 7
+            },
+            "amount": 0.00
+          },
+          {
+            "$type": "Projekt_WPF.models.SummaryItemEntry, Projekt_WPF",
+            "el": {
+              "$type": "Projekt_WPF.models.Outcome, Projekt_WPF",
+              "type": 1,
+              "name": "zakupy",
+              "frequency": 0,
+              "amount": 44.0,
+              "begin": "2021-01-14",
+              "end": "2021-01-14",
+              "duration": 0,
+              "category": {
+                "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+                "name": "spożywka",
+                "id": 11
+              },
+              "description": "",
+              "id": 11
+            },
+            "amount": 0.0
+          },
+          {
+            "$type": "Projekt_WPF.models.SummaryItemEntry, Projekt_WPF",
+            "el": {
+              "$type": "Projekt_WPF.models.Outcome, Projekt_WPF",
+              "type": 1,
+              "name": "zakupy",
+              "frequency": 0,
+              "amount": 66.0,
+              "begin": "2021-01-07",
+              "end": "2021-01-07",
+              "duration": 0,
+              "category": {
+                "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+                "name": "spożywka",
+                "id": 11
+              },
+              "description": "",
+              "id": 11
+            },
+            "amount": 0.0
+          }
+        ]
+      },
+      "incomeCategory_summary": {
+        "$type": "System.Collections.Generic.List`1[[Projekt_WPF.models.SummaryItemCategory, Projekt_WPF]], mscorlib",
+        "$values": [
+          {
+            "$type": "Projekt_WPF.models.SummaryItemCategory, Projekt_WPF",
+            "el": {
+              "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+              "name": "mieszkanie",
+              "id": 2
+            },
+            "amount": 0.00
+          },
+          {
+            "$type": "Projekt_WPF.models.SummaryItemCategory, Projekt_WPF",
+            "el": {
+              "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+              "name": "spożywka",
+              "id": 11
+            },
+            "amount": 0.0
+          }
+        ]
+      },
+      "outncomeCategory_summary": {
+        "$type": "System.Collections.Generic.List`1[[Projekt_WPF.models.SummaryItemCategory, Projekt_WPF]], mscorlib",
+        "$values": []
+      },
+      "summTypes": null,
+      "maxsingle": 0.0,
+      "maxcategory": 0.0,
+      "name": "podsumowanie nr: 3",
+      "id": 3
+    }
+  ]
+}

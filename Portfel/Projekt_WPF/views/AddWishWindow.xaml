@@ -1,0 +1,89 @@
+﻿<Window x:Class="Projekt_WPF.views.AddWishWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Projekt_WPF.views"
+      mc:Ignorable="d" 
+        xmlns:mn="clr-namespace:Projekt_WPF"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddWishWindow"
+        Loaded="Window_Loaded"
+        >
+
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+    </Window.Resources>
+    <Grid x:Name="mainGrid" Style="{StaticResource gridBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <GroupBox Header="nazwa">
+                    <TextBox Name="nameTextBox"></TextBox>
+                </GroupBox>
+                <GroupBox Header="kwota">
+                    <TextBox Name="amountTextBox" TextChanged="onlynumbersTextChanged"></TextBox>
+                </GroupBox>
+                <GroupBox Header="kategoria">
+                    <ComboBox Name="categoryCombobox"></ComboBox>
+                </GroupBox>
+                
+                
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <GroupBox Header="krotność">
+                    <StackPanel>
+                        
+                    
+                        <RadioButton GroupName="multiplicityGroupRB" Name="onetimeRadioButton" IsChecked="True">
+                            <TextBlock>
+                                jednorazowy
+                            </TextBlock>
+                        </RadioButton>
+                        <RadioButton GroupName="multiplicityGroupRB" Name="PeriodRadioButton">
+                            <TextBlock>
+                                comiesięczny
+                            </TextBlock>
+                        </RadioButton>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="okres">
+                    <StackPanel>
+                        <CheckBox x:Name="isPeriodDefined" IsChecked="true">
+                            czas zdefiniowany
+                        </CheckBox>
+                        <StackPanel Visibility="{Binding ElementName=isPeriodDefined, Path=IsChecked, Converter={StaticResource BoolToVis}}">
+                            <DatePicker x:Name="beginDatePicker" mn:DatePickerCalendar.IsMonthYear="True" mn:DatePickerDateFormat.DateFormat="MMM-yyyy" Text="MMM-yyyy" />
+                            
+                        </StackPanel>
+                        <GroupBox Header="ile miesięcy" Visibility="{Binding ElementName=PeriodRadioButton, Path=IsChecked, Converter={StaticResource BoolToVis}}">
+                            <TextBox Name="durationTextBox" TextChanged="onlynumbersTextChanged"></TextBox>
+                        </GroupBox>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+           
+        </Grid>
+        <DockPanel Grid.Row="1" LastChildFill="true">
+            <GroupBox DockPanel.Dock="Top" Header="Opis">
+                <TextBox Name="DescriptionTextBox">
+
+                </TextBox>
+            </GroupBox>
+        </DockPanel>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button Style="{StaticResource Button}" Name="saveButton" Click="saveButton_Click" > zapisz</Button>
+            <Button Style="{StaticResource deleteButton}" Name="clearButton" Click="clearButton_Click" > wyczyść</Button>
+            <Button Style="{StaticResource deleteButton}" Name="cancelButton"  Click="cancelButton_Click">zamknij</Button>
+        </StackPanel>
+
+    </Grid>
+</Window>

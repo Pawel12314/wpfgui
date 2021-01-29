@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MyViewModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <categories>
+    <Category>
+      <id>1</id>
+      <name>praca</name>
+    </Category>
+  </categories>
+  <entries>
+    <Income>
+      <id>1</id>
+      <name>pensja</name>
+      <frequency>comiesieczny</frequency>
+      <amount>2000</amount>
+      <begin>2021-01-28</begin>
+      <end>2022-01-28</end>
+      <duration>12</duration>
+      <category>
+        <id>1</id>
+        <name>praca</name>
+      </category>
+      <description />
+    </Income>
+    <Outcome>
+      <id>2</id>
+      <name>paliwo</name>
+      <frequency>comiesieczny</frequency>
+      <amount>100</amount>
+      <begin>2021-01-28</begin>
+      <end>2022-01-28</end>
+      <duration>12</duration>
+      <category>
+        <id>1</id>
+        <name>praca</name>
+      </category>
+      <description />
+    </Outcome>
+  </entries>
+  <summaryList />
+  <wishes>
+    <Wish>
+      <id>1</id>
+      <name>telewizor</name>
+      <frequency>jednorazowy</frequency>
+      <amount>1500</amount>
+      <begin>0001-01-01</begin>
+      <end>0001-01-01</end>
+      <duration>0</duration>
+      <category>
+        <id>1</id>
+        <name>praca</name>
+      </category>
+      <description>do oglądania barw szczęścia</description>
+      <wishDate>notspecified</wishDate>
+    </Wish>
+  </wishes>
+</MyViewModel>

@@ -1,0 +1,104 @@
+﻿<Page x:Class="Projekt_WPF.views.SummareCreatePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Projekt_WPF.views"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="800"
+      Title="SummareCreatePage"
+      Background="white"
+      Loaded="windowLoaded"
+      >
+    <Page.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </Page.Resources>
+    <Grid>
+        <StackPanel>
+            <GroupBox >
+                <GroupBox.Header>
+                    wybierz kategorie które chcesz uwzględnić w podsumowaniu
+                </GroupBox.Header>
+                
+                    <StackPanel Orientation="Horizontal" x:Name="selectCategoriesGroupBox" >
+                        <StackPanel  Margin="5" Orientation="Vertical">
+                            <Label Content="Pomiń" Margin="5" HorizontalAlignment="Center"/>
+                            <ListBox x:Name="selectCategoriesIgnoreListBox" SelectionMode="Multiple" MinHeight="100" MaxHeight="220"/>
+                        </StackPanel>
+                        <StackPanel Margin="5" Orientation="Vertical">
+                            <Button x:Name="selectCategoriesIncludeAllButton" Content="⇒" FontSize="20" Margin="5" Padding="0"/>
+                            <Button x:Name="selectCategoriesIncludeSelectedButton" Content="→" FontSize="20" Margin="5" Padding="0" Click="selectCategoriesIncludeSelectedButton_Click"/>
+                            <Button x:Name="selectCategoriesIgnoreSelectedButton" Content="←" FontSize="20" Margin="5" Padding="0" Click="selectCategoriesIgnoreSelectedButton_Click"/>
+                            <Button x:Name="selectCategoriesIgnoreAllButton" Content="⟸" FontSize="20" Margin="5" Padding="0"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="2" Margin="5" Orientation="Vertical">
+                            <Label Content="Uwzględnij" Margin="5" HorizontalAlignment="Center"/>
+                            <ListBox x:Name="selectCategoriesIncludeListBox" SelectionMode="Multiple"  MinHeight="100" MaxHeight="220"/>
+                        </StackPanel>
+
+                        
+                    </StackPanel>
+                
+            </GroupBox>
+            <GroupBox x:Name="selectDatesGroupBox" Margin="5">
+                <GroupBox.Header>
+                    zakres dat
+                </GroupBox.Header>
+                <StackPanel >
+                    <RadioButton x:Name="selectDatesCheckBox" Content=" Zakres dat" Grid.Row="0" Margin="5" GroupName="dateRange" />
+                    <StackPanel Orientation="Horizontal">
+                    <StackPanel Width="auto" Height="auto"  Margin="15,5" Orientation="Horizontal" Visibility="{Binding ElementName=selectDatesCheckBox, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <CheckBox x:Name="selectDatesSinceCheckBox" Content=" Od:  " />
+                            <Calendar Width="auto" Height="auto"  Name="selectDatesSinceDatePicker" DisplayModeChanged="onlymonthandyearAvalilable"/>
+                    </StackPanel>
+                    <StackPanel  Margin="15,5" Orientation="Horizontal" Visibility="{Binding ElementName=selectDatesCheckBox, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <CheckBox x:Name="selectDatesUntilCheckBox" Content=" Do:  " />
+                            <DatePicker Name="selectDatesUntilDatePicker"  />
+                    </StackPanel>
+                </StackPanel>
+                    <StackPanel Orientation="Horizontal"  Margin="15,5"  >
+                        <RadioButton x:Name="selectDatesLastMonthButton" Content="ostatni miesiąc" Margin="5" Padding="5,0" GroupName="dateRange"/>
+                        <RadioButton x:Name="selectDatesLastThreeMonthsButton" Content="ostatnie 3 miesiące" Margin="5" Padding="5,0" GroupName="dateRange"/>
+                        <RadioButton x:Name="selectDatesLastYearButton" Content="ostatni rok" Margin="5" Padding="5,0" GroupName="dateRange"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox x:Name="selectAmountGroupBox" Grid.Row="1" Margin="5">
+                <GroupBox.Header>
+                    zakres kwot
+                </GroupBox.Header>
+                <StackPanel>
+                    <StackPanel Grid.Column="0" Margin="15,5" Orientation="Horizontal">
+                        <TextBlock>od</TextBlock>
+                        <TextBox x:Name="selectAmountFromTextBox" MinWidth="100" MaxWidth="200" Padding="5,2"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Margin="15,5" Orientation="Horizontal">
+                        <TextBlock>do</TextBlock>
+                        <TextBox x:Name="selectAmountUpToTextBox" MinWidth="100" MaxWidth="200" Padding="5,2"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox>
+                <GroupBox.Header>
+                    wygeneruj wykresy:
+                </GroupBox.Header>
+                <StackPanel>
+                    <StackPanel Grid.Row="0" Margin="15,5" Orientation="Horizontal">
+                        <CheckBox x:Name="generateChartsExpensesCheckBox" Content=" Do wydatków (kołowy)" VerticalAlignment="Center"/>
+                        <ComboBox x:Name="generateChartsExpensesComboBox" MinWidth="100" Margin="10,5" Visibility="Hidden"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Margin="15,5" Orientation="Horizontal">
+                        <CheckBox x:Name="generateChartsIncomeCheckBox" Content=" Do wpływów (kołowy)" VerticalAlignment="Center"/>
+                        <ComboBox x:Name="generateChartsIncomeComboBox" MinWidth="100" Margin="10,5" Visibility="Hidden"/>
+                    </StackPanel>
+                    <CheckBox x:Name="generateChartsCompareWithoutCategoriesRadioButton" Content="porównanie wpływy/wydatki (słupkowy)" Grid.Row="2" Margin="15,10"/>
+                    <CheckBox x:Name="generateChartsCompareWithCategoriesRadioButton" Content="porównanie wpływy/wydatki (słupkowy) z podziałem na kategorie" Grid.Row="3" Margin="15,10"/>
+
+                </StackPanel>
+            </GroupBox>
+            <StackPanel Grid.Row="4" Margin="15,5">
+                <Button x:Name="generateSummaryButton" Content="Wygeneruj podsumowanie" Click="genereateSummary" Width="200"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

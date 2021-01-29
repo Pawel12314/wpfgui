@@ -1,0 +1,165 @@
+{
+  "$type": "System.Collections.Generic.List`1[[Projekt_WPF.models.Entry, Projekt_WPF]], mscorlib",
+  "$values": [
+    {
+      "$type": "Projekt_WPF.models.Income, Projekt_WPF",
+      "name": "poczta",
+      "frequency": 1,
+      "amount": 2137.0,
+      "begin": "2021-01-10",
+      "end": "2024-01-10",
+      "duration": 36,
+      "category": {
+        "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+        "name": "praca",
+        "id": 1
+      },
+      "description": "wynagrodzenie",
+      "id": 6
+    },
+    {
+      "$type": "Projekt_WPF.models.Income, Projekt_WPF",
+      "name": "UBER",
+      "frequency": 0,
+      "amount": 140.0,
+      "begin": "2021-01-11",
+      "end": "2021-01-11",
+      "duration": 0,
+      "category": {
+        "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+        "name": "praca",
+        "id": 1
+      },
+      "description": "3h jazdy",
+      "id": 5
+    },
+    {
+      "$type": "Projekt_WPF.models.Outcome, Projekt_WPF",
+      "name": "paliwo",
+      "frequency": 0,
+      "amount": 50.0,
+      "begin": "2021-01-11",
+      "end": "2021-01-11",
+      "duration": 0,
+      "category": {
+        "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+        "name": "praca",
+        "id": 1
+      },
+      "description": "na UBERa",
+      "id": 5
+    },
+    {
+      "$type": "Projekt_WPF.models.Outcome, Projekt_WPF",
+      "name": "czynsz",
+      "frequency": 1,
+      "amount": 666.90,
+      "begin": "2021-01-01",
+      "end": "2026-01-01",
+      "duration": 60,
+      "category": {
+        "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+        "name": "mieszkanie",
+        "id": 2
+      },
+      "description": "czynsz + woda + śmieci",
+      "id": 7
+    },
+    {
+      "$type": "Projekt_WPF.models.Outcome, Projekt_WPF",
+      "name": "energia",
+      "frequency": 1,
+      "amount": 62.0,
+      "begin": "2021-01-05",
+      "end": "2026-01-05",
+      "duration": 60,
+      "category": {
+        "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+        "name": "rachunki",
+        "id": 3
+      },
+      "description": "",
+      "id": 8
+    },
+    {
+      "$type": "Projekt_WPF.models.Outcome, Projekt_WPF",
+      "name": "internet",
+      "frequency": 1,
+      "amount": 29.95,
+      "begin": "2021-01-11",
+      "end": "2023-01-11",
+      "duration": 24,
+      "category": {
+        "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+        "name": "rachunki",
+        "id": 3
+      },
+      "description": "300Mb/s Netia",
+      "id": 9
+    },
+    {
+      "$type": "Projekt_WPF.models.Outcome, Projekt_WPF",
+      "name": "telefon",
+      "frequency": 1,
+      "amount": 25.00,
+      "begin": "2021-01-01",
+      "end": "2022-01-01",
+      "duration": 12,
+      "category": {
+        "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+        "name": "rachunki",
+        "id": 3
+      },
+      "description": "",
+      "id": 10
+    },
+    {
+      "$type": "Projekt_WPF.models.Outcome, Projekt_WPF",
+      "name": "zakupy",
+      "frequency": 0,
+      "amount": 44.0,
+      "begin": "2021-01-14",
+      "end": "2021-01-14",
+      "duration": 0,
+      "category": {
+        "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+        "name": "spożywka",
+        "id": 11
+      },
+      "description": "",
+      "id": 11
+    },
+    {
+      "$type": "Projekt_WPF.models.Outcome, Projekt_WPF",
+      "name": "zakupy",
+      "frequency": 0,
+      "amount": 66.0,
+      "begin": "2021-01-07",
+      "end": "2021-01-07",
+      "duration": 0,
+      "category": {
+        "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+        "name": "spożywka",
+        "id": 11
+      },
+      "description": "",
+      "id": 11
+    },
+    {
+      "$type": "Projekt_WPF.models.Outcome, Projekt_WPF",
+      "name": "prezent",
+      "frequency": 0,
+      "amount": 220.0,
+      "begin": "2021-01-08",
+      "end": "2021-01-08",
+      "duration": 0,
+      "category": {
+        "$type": "Projekt_WPF.models.Category, Projekt_WPF",
+        "name": "okazjonalne",
+        "id": 12
+      },
+      "description": "urodzinowy dla Roberta Makłowicza",
+      "id": 13
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+﻿<Window x:Class="Projekt_WPF.views.WindowEditCategory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_WPF.views"
+        mc:Ignorable="d"
+        Title="Edytuj kategorię" Height="150" Width="400"
+        Loaded="loaded"
+         SizeToContent="WidthAndHeight"
+        >
+    <Grid Style="{StaticResource gridBackground}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Poprzednia nazwa:" Grid.Row="0" Grid.Column="0" Margin="5" VerticalAlignment="Center"/>
+        <TextBox Style="{StaticResource titleInput}" x:Name="previousNameTextBox" Grid.Row="0" Grid.Column="1" Margin="5" IsEnabled="False" MinHeight="50" MinWidth="300"/>
+        <Label Content="Nowa nazwa:" Grid.Row="1" Grid.Column="0" Margin="5" VerticalAlignment="Center"  />
+        <TextBox Style="{StaticResource titleInput}"  x:Name="newNameTextBox" Grid.Row="1" Grid.Column="1" Margin="5" MinHeight="50" MinWidth="300"/>
+
+        <WrapPanel Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Right">
+            <Button Style="{StaticResource Button}" x:Name="confirmEditButton" Content="Dodaj" Margin="5" Padding="15,5" IsDefault="True" Click="confirmEditButtonClick"/>
+            <Button Style="{StaticResource deleteButton}" x:Name="cancelButton" Content="Anuluj" Margin="5" Padding="15,5" IsCancel="True" Click="cancelButtonClick"/>
+        </WrapPanel>
+    </Grid>
+</Window>
