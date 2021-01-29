@@ -10,11 +10,11 @@ none
 false
 TRACE
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\App.xaml
-15-169363117
+162092965641
 
-56-1830511083
+57-1920172099
 25617735944
-controls\SummaryEntry.xaml;MainWindow.xaml;views\AddWishWindow.xaml;views\BudgetPage.xaml;views\SummareCreatePage.xaml;views\SummaryPage.xaml;views\UserControlCategories.xaml;views\UserControlPersonalize.xaml;views\UserControlEntries.xaml;views\UserControlStartScreen.xaml;views\UserControlSummary.xaml;views\WindowEditCategory.xaml;views\WindowEditEntry.xaml;views\WindowNewCategory.xaml;views\WindowNewEntry.xaml;
+controls\SummaryEntry.xaml;MainWindow.xaml;userControls\ButtonsListControl.xaml;views\AddWishWindow.xaml;views\BudgetPage.xaml;views\SummareCreatePage.xaml;views\SummaryPage.xaml;views\UserControlCategories.xaml;views\UserControlPersonalize.xaml;views\UserControlEntries.xaml;views\UserControlStartScreen.xaml;views\UserControlSummary.xaml;views\WindowEditCategory.xaml;views\WindowEditEntry.xaml;views\WindowNewCategory.xaml;views\WindowNewEntry.xaml;
 
-False
+True
 

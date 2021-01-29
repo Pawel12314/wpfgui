@@ -121,6 +121,9 @@
     <Compile Include="models\Entry.cs" />
     <Compile Include="models\Outcome.cs" />
     <Compile Include="models\Wish.cs" />
+    <Compile Include="userControls\ButtonsListControl.xaml.cs">
+      <DependentUpon>ButtonsListControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\MyViewModel.cs" />
     <Compile Include="globalSettings\DatePickerCalendar.cs" />
     <Compile Include="views\AddWishWindow.xaml.cs">
@@ -178,6 +181,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="userControls\ButtonsListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\AddWishWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

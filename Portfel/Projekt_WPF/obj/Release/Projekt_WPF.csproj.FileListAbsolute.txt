@@ -274,3 +274,5 @@ C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Relea
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\Projekt_WPF.csproj.GenerateResource.cache
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\Projekt_WPF.csproj.CoreCompileInputs.cache
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\Projekt_WPF.csproj.CopyComplete
+C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\userControls\ButtonsListControl.g.cs
+C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\userControls\ButtonsListControl.baml

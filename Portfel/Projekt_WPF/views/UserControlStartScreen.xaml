@@ -5,10 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Projekt_WPF.views"
              mc:Ignorable="d" 
+             xmlns:mycontrols="clr-namespace:Projekt_WPF.userControls"
              d:DesignHeight="450" d:DesignWidth="800"
+      Loaded="Page_Loaded"
              
       >
     <Grid x:Name="mainGrid" Background="GhostWhite">
-        
+        <mycontrols:ButtonsListControl x:Name="menu" AddProperty="{Binding addCommand}"  MyWidthProperty="300" MyHeightProperty="100" OrientationProperty="Horizontal">
+            
+        </mycontrols:ButtonsListControl>
     </Grid>
 </Page>
