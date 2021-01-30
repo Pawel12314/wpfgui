@@ -1,5 +1,6 @@
 ﻿using Projekt_WPF.commands;
 using Projekt_WPF.models;
+using Projekt_WPF.models.patterns.CategoryPatterns.FactoryMethod;
 using Projekt_WPF.models.patterns.factoryMethodEntry;
 using Projekt_WPF.ViewModel;
 using System;
@@ -27,6 +28,10 @@ namespace Projekt_WPF.views
     {
         private MyViewModel vm { get; set; }
 
+
+        private ICommand addCMD { get; set; }
+        private ICommand editCMD { get; set; }
+        private ICommand deleteCMD { get; set; }
         private ICollectionView view { get; set; }
 
         private ICommand add { get; set; }
@@ -35,16 +40,22 @@ namespace Projekt_WPF.views
             this.vm = vm;
             InitializeComponent();
         }
-
+        public void  openAddmenuWish()
+        {
+            var dialog = new addNewCategory(new FactoryWishGroupCreator());
+            dialog.Show();
+        }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             //definedWishesListBox.ItemsSource = vm.wishes;
-            wishesListbox.ItemsSource = vm.wishes;
+            wishesListbox.ItemsSource = vm.wishgroups;
             add = new CommandTemplate(o => addWishButton_Click(),o => true);
             menuButtons.AddProperty = add;
             view =
             CollectionViewSource.GetDefaultView(wishesListbox.ItemsSource);
             view.Filter = FilterDate;
+
+            addCMD = new CommandTemplate(o => openAddmenuWish(), o => true);
         }
 
         private void addWishButton_Click()
@@ -61,7 +72,7 @@ namespace Projekt_WPF.views
 
         public bool FilterDate(Object item)
         {
-            Entry e = (Entry)item;
+            WishGroup e = (WishGroup)item;
             int month;
             if(int.TryParse(monthTextBox.Text,out month))
             {

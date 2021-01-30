@@ -28,7 +28,12 @@
             <ListBox DockPanel.Dock="Top" Name="wishesListbox" MinHeight="200">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding name}"></TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding name}"></TextBlock>
+                            <TextBlock Text="{Binding begin}"></TextBlock>
+                            <TextBlock Text="{Binding end}"></TextBlock>
+                        </StackPanel>
+                        
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>

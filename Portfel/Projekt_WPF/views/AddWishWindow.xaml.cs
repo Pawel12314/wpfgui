@@ -43,7 +43,7 @@ namespace Projekt_WPF.views
             if(entryFactory is WishFactory)
             {
                 wishMenu.Visibility = Visibility.Visible;
-
+                wishCategoryCombobox.ItemsSource = viewModel.wishgroups;
             }
             else
             {

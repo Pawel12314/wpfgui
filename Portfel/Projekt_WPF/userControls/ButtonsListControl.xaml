@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:Projekt_WPF.userControls"
              mc:Ignorable="d" 
              Name="control"
-                         MinWidth="200"
+             d:DesignHeight="450" d:DesignWidth="800"
+             MinWidth="200"
              MinHeight="100"
              >
     <Grid>

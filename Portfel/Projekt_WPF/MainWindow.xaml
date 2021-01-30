@@ -55,10 +55,13 @@
                     <MenuItem x:Name="menuItemViewSummary" Header="Podsumowanie" Click="menuItemViewSummary_Click"></MenuItem>
                     <MenuItem x:Name="menuItemViewSummary2" Header="Podsumowanie2" Click="menuItemViewSummary_Click2"></MenuItem>
                     <MenuItem x:Name="menuITemBudget" Header="budżet" Click="menuITemBudget_Click"></MenuItem>
+                    <MenuItem Name="newCategoeries" Header="nowe kategorie" Click="newCategoeries_Click"></MenuItem>
+                    <MenuItem Name="newWishCategories" Header="kategorie Zyczen" Click="newWishCategories_Click"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Opcje">
                     <MenuItem x:Name="menuItemViewPersonalization" Header="Personalizacja" Click="menuItemViewPersonalization_Click"></MenuItem>
                 </MenuItem>
+                
             </Menu>
         </DockPanel>
         <!---

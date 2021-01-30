@@ -20,6 +20,7 @@ using System.Collections.ObjectModel;
 using NodaTime;
 using Projekt_WPF.models.range;
 using Projekt_WPF.commands;
+using Projekt_WPF.models.patterns.CategoryPatterns.categoryPage;
 
 namespace Projekt_WPF
 {
@@ -37,6 +38,8 @@ namespace Projekt_WPF
         public static views.SummaryPage summaryPage;
         public static views.SummareCreatePage summaryCreatePage;
         public static views.BudgetPage budgetPage;
+        public static views.newCategorypageView categoriesPage;
+        public static views.newCategorypageView categorieswishPage;
         public static MyViewModel vm { get; set; }
 
         public CommandTemplate nextSummary { get; set; }
@@ -65,6 +68,8 @@ namespace Projekt_WPF
             summaryPage = new views.SummaryPage();
             summaryCreatePage = new views.SummareCreatePage(vm);
             budgetPage = new views.BudgetPage(vm);
+            categoriesPage = new views.newCategorypageView(vm, new FactoryCategoryPage());
+            categorieswishPage = new views.newCategorypageView(vm, new FactoryWishCategoryPage());
     }
         public MainWindow()
         {
@@ -162,6 +167,27 @@ namespace Projekt_WPF
         private void menuITemBudget_Click(object sender, RoutedEventArgs e)
         {
             mainWindowFrame.Content = budgetPage;
+        }
+
+        ///////////////////////////////managing adding and editing items
+        ///
+        public void addWishGroup(WishGroup wishgroup)
+        {
+            vm.wishgroups.Add(wishgroup);
+        }
+        public void addCategory(Category cat)
+        {
+            vm.categories.Add(cat);
+        }
+
+        private void newCategoeries_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindowFrame.Content = categoriesPage;
+        }
+
+        private void newWishCategories_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindowFrame.Content = categorieswishPage;
         }
     }
 }

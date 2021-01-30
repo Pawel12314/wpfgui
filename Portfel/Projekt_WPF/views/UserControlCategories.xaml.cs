@@ -1,5 +1,6 @@
 ﻿using Projekt_WPF.commands;
 using Projekt_WPF.models;
+using Projekt_WPF.models.patterns.CategoryPatterns.FactoryMethod;
 using Projekt_WPF.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -86,19 +87,7 @@ namespace Projekt_WPF.views
             return false;
         }
 
-        private void categoriesListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (categoriesListBox.SelectedIndex >= 0)
-            {
-                editCategoryButton.IsEnabled = true;
-                deleteCategoryButton.IsEnabled = true;
-            }
-            else
-            {
-                editCategoryButton.IsEnabled = false;
-                deleteCategoryButton.IsEnabled = false;
-            }
-        }
+        
 
         private void newCategoryButton_Click(object sender , RoutedEventArgs e )
         {
@@ -118,7 +107,7 @@ namespace Projekt_WPF.views
         }
         public void newCategoryCmd()
         {
-            var temp = new WindowNewCategory();
+            var temp = new addNewCategory( new FactoryCategoryCreator());
             temp.ShowDialog();
         }
         public void editCategoryCmd()
@@ -151,40 +140,21 @@ namespace Projekt_WPF.views
            this.DataContext = vm;
             categoriesListBox.ItemsSource = vm.categories;
             newCategoryCMD = new CommandTemplate(o => newCategoryCmd(), o => true);
-            KeyBinding keyBindingnew = new KeyBinding
-            {
-                Command = newCategoryCMD,
-                Key = Key.N,
-                Modifiers=ModifierKeys.Control
-               
-            };
-            this.InputBindings.Add(keyBindingnew);
-
+           
            
             editCategoryCMD = new CommandTemplate(o => editCategoryCmd(), o =>
             
                 isSelected()
             
             );
-            KeyBinding keyBindingedit = new KeyBinding
-            {
-                Command = editCategoryCMD,
-                Key = Key.E,
-                Modifiers = ModifierKeys.Control
-
-            };
-            this.InputBindings.Add(keyBindingedit);
+           
+           
 
             deleteCategoryCMD = new CommandTemplate(o => deleteCategoryCmd(), o => isSelected());
-            KeyBinding keyBindingdelete = new KeyBinding
-            {
-                Command = deleteCategoryCMD,
-                Key = Key.X,
-                Modifiers = ModifierKeys.Control
-            };
-            this.InputBindings.Add(keyBindingdelete);
 
-
+            menubuttons.AddProperty = newCategoryCMD;
+            menubuttons.EditProperty = editCategoryCMD;
+            menubuttons.DeleteProperty = deleteCategoryCMD;
             // this.InputBindings.Add(keyBinding);
             // var li = this.Resources[""];
             // MessageBox.Show(li.ToString());

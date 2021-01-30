@@ -10,11 +10,11 @@ none
 false
 TRACE
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\App.xaml
-20-624409663
+24-1853982632
 
-62-1717145947
+77-508039965
 25617735944
-controls\SummaryEntry.xaml;Filters\DateWishFilter.xaml;MainWindow.xaml;userControls\ButtonsListControl.xaml;userControls\DiagramControl.xaml;userControls\DiagramEntry.xaml;userControls\DiagramItemsSource.xaml;views\AddWishWindow.xaml;views\BudgetPage.xaml;views\SummareCreatePage.xaml;views\SummaryPage.xaml;views\UserControlCategories.xaml;views\UserControlPersonalize.xaml;views\UserControlEntries.xaml;views\UserControlStartScreen.xaml;views\UserControlSummary.xaml;views\WindowEditCategory.xaml;views\WindowEditEntry.xaml;views\WindowNewCategory.xaml;views\WindowNewEntry.xaml;
+controls\SummaryEntry.xaml;Filters\DateWishFilter.xaml;MainWindow.xaml;userControls\ButtonsListControl.xaml;userControls\creationgButtonsControl.xaml;userControls\DiagramControl.xaml;userControls\DiagramEntry.xaml;userControls\DiagramItemsSource.xaml;views\addNewCategory.xaml;views\AddWishWindow.xaml;views\BudgetPage.xaml;views\ChartWindow.xaml;views\newCategorypageView.xaml;views\SummareCreatePage.xaml;views\SummaryPage.xaml;views\UserControlCategories.xaml;views\UserControlPersonalize.xaml;views\UserControlEntries.xaml;views\UserControlStartScreen.xaml;views\UserControlSummary.xaml;views\WindowEditCategory.xaml;views\WindowEditEntry.xaml;views\WindowNewCategory.xaml;views\WindowNewEntry.xaml;
 
 True
 

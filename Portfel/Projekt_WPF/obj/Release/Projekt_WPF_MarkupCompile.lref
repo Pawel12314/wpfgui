@@ -1,11 +1,14 @@
 ﻿
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\App.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\controls\SummaryEntry.xaml;;
+FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\Filters\DateWishFilter.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\MainWindow.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\userControls\ButtonsListControl.xaml;;
+FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\userControls\creationgButtonsControl.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\userControls\DiagramControl.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\userControls\DiagramEntry.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\userControls\DiagramItemsSource.xaml;;
+FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\addNewCategory.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\AddWishWindow.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\BudgetPage.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\SummareCreatePage.xaml;;
@@ -19,5 +22,5 @@ FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\Wi
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\WindowEditEntry.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\WindowNewCategory.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\WindowNewEntry.xaml;;
-FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\Filters\DateWishFilter.xaml;;
+FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\newCategorypageView.xaml;;
 

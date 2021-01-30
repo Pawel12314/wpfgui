@@ -32,6 +32,9 @@ namespace Projekt_WPF.ViewModel
 
         public ObservableCollection<Entry> wishes { get; set; }
 
+        [XmlArray]
+        [XmlArrayItem(typeof(WishGroup))]
+        public ObservableCollection<Category>wishgroups { get; set; }
   
 
       
@@ -42,6 +45,7 @@ namespace Projekt_WPF.ViewModel
             categories = new ObservableCollection<Category>();
             entries = new ObservableCollection<Entry>();
             summaryList = new ObservableCollection<Summary>();
+          
             /*
             categories = new ObservableCollection<Category>( Category.readFromFile("kategorie.json")  );
             entries = new ObservableCollection<Entry>( Entry.readFromFile("wpisy.json") );
@@ -98,7 +102,7 @@ namespace Projekt_WPF.ViewModel
             this.categories = mvm.categories;
             this.entries = this.addCateogryReference(mvm.entries.OrderBy(item=>item.categoryID).ToList(),mvm.categories);
             this.wishes = this.addCateogryReference(mvm.wishes.OrderBy(item=>item.categoryID).ToList(),mvm.categories);
-
+            this.wishgroups = mvm.wishgroups;
             this.summaryList = mvm.summaryList;
             //this.wishes = mvm.wishes;
             

@@ -1,0 +1,38 @@
+﻿<Window x:Class="Projekt_WPF.views.addNewCategory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_WPF.views"
+        mc:Ignorable="d"
+        xmlns:mn="clr-namespace:Projekt_WPF"
+        Title="addNewCategory" Height="450" Width="800"
+        Loaded="Window_Loaded"
+        xmlns:controls="clr-namespace:Projekt_WPF.userControls"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Row="0" Header="nazwa">
+            <TextBox Name="nameTextBox"/>
+            
+        </GroupBox>
+        <GroupBox Grid.Row="1" Header="czas" Name="wishGroupOptions">
+            <StackPanel>
+                <GroupBox Header="początek">
+                    <DatePicker x:Name="beginDatePicker" mn:DatePickerCalendar.IsMonthYear="True" mn:DatePickerDateFormat.DateFormat="MMM-yyyy" Text="MMM-yyyy" />
+                </GroupBox>
+                <GroupBox Header="czas trwania">
+                    <TextBox Name="durationTextBox" TextChanged="onlynumbersTextChanged">
+                        
+                    </TextBox>
+                </GroupBox>
+            </StackPanel>
+        </GroupBox>
+        <controls:creationgButtonsControl Grid.Row="2" MyHeightProperty="100" MyWidthProperty="300" OrientationProperty="Horizontal" x:Name="menuButtonsCreation"></controls:creationgButtonsControl>
+    </Grid>
+</Window>
