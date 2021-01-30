@@ -278,3 +278,9 @@ C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Relea
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\Projekt_WPF.csproj.CopyComplete
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\Projekt_WPF.exe
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\Projekt_WPF.pdb
+C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\userControls\DiagramEntry.g.cs
+C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\userControls\DiagramItemsSource.g.cs
+C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\userControls\DiagramEntry.baml
+C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\userControls\DiagramItemsSource.baml
+C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\Filters\DateWishFilter.g.cs
+C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\Filters\DateWishFilter.baml

@@ -40,6 +40,15 @@ namespace Projekt_WPF.views
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             categoryCombobox.ItemsSource = viewModel.categories;
+            if(entryFactory is WishFactory)
+            {
+                wishMenu.Visibility = Visibility.Visible;
+
+            }
+            else
+            {
+                wishMenu.Visibility = Visibility.Collapsed;
+            }
         }
 
         
@@ -104,10 +113,24 @@ namespace Projekt_WPF.views
                 MessageBox.Show("nie wybrano kategorii");
                 return;
             }
-
             Category category = (Category)categoryCombobox.SelectedItem;
-            ICategory ICat = new EntryCategory(ref category, new CategoryEmptyDecorated());
-            wish = entryFactory.createEntry(name, amount, description, ICat, begin, duration);
+            ICategoryBase ICat = new EntryCategory(ref category, new CategoryEmptyDecorated());
+            ICategoryBase catres = ICat;
+            if (entryFactory is WishFactory)
+            if(wishCategoryCombobox.SelectedItem==null)
+            {
+                    MessageBox.Show("nie wybrano grupy");
+                    return;
+            }
+            else
+            {
+                    WishGroup group = (WishGroup)wishCategoryCombobox.SelectedItem;
+                    catres = new WishCategory(ref group,ref ICat);
+            }
+                      
+
+           
+            wish = entryFactory.createEntry(name, amount, description, catres, begin, duration);
             //wish = new entryfa(name, amount,ref category, freq,begin, duration, description);
             entryFactory.addElement(wish, (MainWindow)Application.Current.MainWindow);
             //((BudgetPage)((MainWindow)Application.Current.MainWindow).mainWindowFrame.Content).addWish(wish);

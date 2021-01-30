@@ -9,6 +9,6 @@ namespace Projekt_WPF.models.patterns.Decorator
     public abstract class ICategoryBase
     {
         public abstract Category getCategory();
-        public abstract Category getWishCategory();
+        public abstract WishGroup getWishCategory();
     }
 }

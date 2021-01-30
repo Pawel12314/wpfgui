@@ -7,18 +7,47 @@
              mc:Ignorable="d" 
              xmlns:mycontrols="clr-namespace:Projekt_WPF.userControls"
              d:DesignHeight="450" d:DesignWidth="800"
+             xmlns:dv="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+      Name="mainscreen"
       Loaded="Page_Loaded"
              
       >
-    <Grid x:Name="mainGrid" Background="GhostWhite">
+    <StackPanel  x:Name="mainGrid" Background="GhostWhite">
         <StackPanel>
-            <mycontrols:DiagramControl>
-                
-            </mycontrols:DiagramControl>
-        
-        <mycontrols:ButtonsListControl x:Name="menu" AddProperty="{Binding addCommand}"  MyWidthProperty="300" MyHeightProperty="100" OrientationProperty="Horizontal">
+
+            <dv:Chart Grid.Row="3" Name="Chart1" Title="Test Chart" >
+
+                <!--<dv:LineSeries Title="Price"
+                            ItemsSource="{Binding Points, Delay=2500, IsAsync=False}"                              
+                            IndependentValueBinding="{Binding Day}"
+                            DependentValueBinding="{Binding Price}" >
+                    <dv:LineSeries.DependentRangeAxis>
+                        <dv:LinearAxis Orientation="Y" Title="Price"
+                                    Minimum="50" Maximum="60" Interval="2"
+                                    ShowGridLines="True"/>
+                    </dv:LineSeries.DependentRangeAxis>
+                    
+                </dv:LineSeries>
+            -->
+
+                <dv:LineSeries Title="Tax"
+                            ItemsSource="{Binding entries, Delay=2500, IsAsync=False}"
+                            IndependentValueBinding="{Binding name}"
+                            DependentValueBinding="{Binding amount}">
+
+                    <dv:LineSeries.DependentRangeAxis>
+                        <dv:LinearAxis Orientation="Y" Title="Tax" Minimum="0" Maximum="2000" Interval="2.5"/>
+                    </dv:LineSeries.DependentRangeAxis>
+                </dv:LineSeries>
+                <dv:Chart.Axes>
+                    <dv:LinearAxis Orientation="X" Title="X-Axis" Interval="2" ShowGridLines="True"/>
+                </dv:Chart.Axes>
+            </dv:Chart>
+            
+            
+            <mycontrols:ButtonsListControl x:Name="menu"   MyWidthProperty="300" MyHeightProperty="100" OrientationProperty="Horizontal">
             
         </mycontrols:ButtonsListControl>
         </StackPanel>
-    </Grid>
+    </StackPanel>
 </Page>

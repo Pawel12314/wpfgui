@@ -68,31 +68,23 @@ namespace Projekt_WPF.ViewModel
         }
         private ObservableCollection<Entry> addCateogryReference(List<Entry>items, ObservableCollection<Category> categories)
         {
-            int catIndex = 0;
             ObservableCollection<Entry> entries = new ObservableCollection<Entry>();
-            for (int ItemIndex = 0; ItemIndex < this.entries.Count; ItemIndex++)
+            for (int i=0;i<items.Count;i++)
             {
-
-                if (categories[catIndex].id > items[ItemIndex].categoryID)
+                for(int u=0;u<categories.Count;u++)
                 {
-                    ItemIndex++;
+                    if(items[i].categoryID==categories[u].id)
+                    {
+                        Entry e = items[i];
+                        e.category = categories[u];
+                        entries.Add(e);
+                    }
                 }
-                else
-                if (categories[catIndex].id == items[ItemIndex].categoryID)
-                {
-                    Entry ent = this.entries[ItemIndex];
-                    ent.category = this.categories[catIndex];
-                    entries.Add(ent);
-                    ItemIndex++;
-                }
-                else
-                if (categories[catIndex].id < items[ItemIndex].categoryID)
-                {
-                    catIndex++;
-                }
-
             }
             return entries;
+           
+            
+            
         }
         public void deserialize(string filename)
         {

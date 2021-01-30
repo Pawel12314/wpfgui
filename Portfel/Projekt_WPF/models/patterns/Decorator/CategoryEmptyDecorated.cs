@@ -18,7 +18,7 @@ namespace Projekt_WPF.models.patterns.Decorator
             throw new NotImplementedException();
         }
 
-        public override Category getWishCategory()
+        public override WishGroup getWishCategory()
         {
             throw new NotImplementedException();
         }

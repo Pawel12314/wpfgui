@@ -27,7 +27,7 @@ namespace Projekt_WPF.models.patterns.CategoryClass
             return this.category;
         }
        
-        public override  Category getWishCategory()
+        public override  WishGroup getWishCategory()
         {
             
                 return  getDecoree().getWishCategory();

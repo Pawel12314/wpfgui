@@ -90,6 +90,9 @@
     </Compile>
     <Compile Include="conversion2\ColumnDiagramConversion.cs" />
     <Compile Include="conversion2\EntryTypeConverter.cs" />
+    <Compile Include="Filters\DateWishFilter.xaml.cs">
+      <DependentUpon>DateWishFilter.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Filters\Filters.cs" />
     <Compile Include="globalSettings\GlobalSettings.cs" />
     <Compile Include="globalSettings\ObjectToTypeConverter.cs" />
@@ -121,11 +124,18 @@
     <Compile Include="models\Entry.cs" />
     <Compile Include="models\Outcome.cs" />
     <Compile Include="models\Wish.cs" />
+    <Compile Include="models\WishGroup.cs" />
     <Compile Include="userControls\ButtonsListControl.xaml.cs">
       <DependentUpon>ButtonsListControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="userControls\DiagramControl.xaml.cs">
       <DependentUpon>DiagramControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\DiagramEntry.xaml.cs">
+      <DependentUpon>DiagramEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\DiagramItemsSource.xaml.cs">
+      <DependentUpon>DiagramItemsSource.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\MyViewModel.cs" />
     <Compile Include="globalSettings\DatePickerCalendar.cs" />
@@ -172,6 +182,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Filters\DateWishFilter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -189,6 +203,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="userControls\DiagramControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="userControls\DiagramEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="userControls\DiagramItemsSource.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

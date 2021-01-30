@@ -16,8 +16,8 @@ namespace Projekt_WPF.models.patterns.CategoryClass
         }
         
         public int wishCategoryID { get; set; }
-        public Category wishCategory { get; set; }
-        public WishCategory(ref Category wishCategory,ref ICategoryBase decoree)
+        public WishGroup wishCategory { get; set; }
+        public WishCategory(ref WishGroup wishCategory,ref ICategoryBase decoree)
         {
             this.decoree = decoree;
        
@@ -30,7 +30,7 @@ namespace Projekt_WPF.models.patterns.CategoryClass
             return  getDecoree().getCategory();
         }
 
-        public override Category getWishCategory()
+        public override WishGroup getWishCategory()
         {
             return  wishCategory;
         }

@@ -35,6 +35,12 @@
                 <GroupBox Header="kategoria">
                     <ComboBox Name="categoryCombobox"></ComboBox>
                 </GroupBox>
+                <GroupBox Header="grupa życzenia" Name="wishMenu">
+                    <StackPanel>
+                        <ComboBox Name="wishCategoryCombobox"></ComboBox>
+                    </StackPanel>
+                    
+                </GroupBox>
                 
                 
             </StackPanel>

@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:Projekt_WPF.userControls"
              mc:Ignorable="d" 
              Name="control"
-             d:DesignHeight="450" d:DesignWidth="800">
+                         MinWidth="200"
+             MinHeight="100"
+             >
     <Grid>
         <StackPanel Orientation="{Binding ElementName=control, Path=OrientationProperty}">
             <Button Command="{Binding AddProperty , ElementName=control}" Name="AddButton"  Margin="10" Width="{Binding Path = MyWidthProperty, ElementName=control}" Height="{Binding Path = MyHeightProperty, ElementName=control}"  Style="{StaticResource Button}">dodaj</Button>

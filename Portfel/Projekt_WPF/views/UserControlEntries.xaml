@@ -7,9 +7,11 @@
              xmlns:mn="clr-namespace:Projekt_WPF"
              xmlns:convrtrs="clr-namespace:Projekt_WPF.globalSettings"
              xmlns:myconverters="clr-namespace:Projekt_WPF.conversion2"
+       xmlns:dv="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="800"
              Loaded="windowLoaded"
+      Name="entriesPage"
       >
     <Page.Resources>
         <convrtrs:ObjectToTypeConverter x:Key="typeConverter"/>
@@ -21,6 +23,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Button Style="{StaticResource Button}" x:Name="addNewEntryButton" Content="Dodaj nowy wpis" Margin="20" Padding="20" Click="addNewEntryButton_Click"/>
@@ -134,7 +137,9 @@
                 <Button Style="{StaticResource Button}" x:Name="editSelectedEntryButton" Content="Edytuj" Margin="10,5" Padding="15,5" IsEnabled="False" Click="editSelectedEntryButton_Click"/>
                 <Button Style="{StaticResource deleteButton}" x:Name="deleteSelectedEntryButton" Content="Usuń" Margin="10,5" Padding="15,5" IsEnabled="False" Click="deleteSelectedEntryButton_Click"/>
             </StackPanel>
+            
         </Grid>
+        
         <!---
         <DataGrid Style="{StaticResource datagridStyle}"  x:Name="entriesDataGrid" ItemsSource="{Binding}" AutoGenerateColumns="False" Grid.Row="3" MinHeight="150" MaxHeight="400">
             <DataGrid.Columns >

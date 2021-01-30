@@ -56,7 +56,7 @@ namespace Projekt_WPF
         static MainWindow()
         {
             vm = new MyViewModel();
-             userControlStartScreen = new views.UserControlStartScreen();
+             userControlStartScreen = new views.UserControlStartScreen(vm);
             userControlSummary = new views.UserControlSummary(vm);
             userControlEntries = new views.UserControlEntries(vm);
              userControlCategories = new views.UserControlCategories(vm);

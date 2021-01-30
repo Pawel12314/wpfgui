@@ -4,6 +4,8 @@ FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\controls
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\MainWindow.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\userControls\ButtonsListControl.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\userControls\DiagramControl.xaml;;
+FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\userControls\DiagramEntry.xaml;;
+FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\userControls\DiagramItemsSource.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\AddWishWindow.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\BudgetPage.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\SummareCreatePage.xaml;;
@@ -17,4 +19,5 @@ FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\Wi
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\WindowEditEntry.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\WindowNewCategory.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\WindowNewEntry.xaml;;
+FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\Filters\DateWishFilter.xaml;;
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projekt_WPF.models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,20 +24,37 @@ namespace Projekt_WPF.userControls
 
 
 
-        public int MyProperty
+
+
+        public List<String> firstSourceProperty
         {
-            get { return (int)GetValue(MyPropertyProperty); }
-            set { SetValue(MyPropertyProperty, value); }
+            get { return (List<String>)GetValue(firstSourcePropertyProperty); }
+            set { SetValue(firstSourcePropertyProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty MyPropertyProperty =
-            DependencyProperty.Register("MyProperty", typeof(int), typeof(DiagramControl), new PropertyMetadata(1));
+        // Using a DependencyProperty as the backing store for firstSourceProperty.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty firstSourcePropertyProperty =
+            DependencyProperty.Register("firstSourceProperty", typeof(List<String>), typeof(DiagramControl), new FrameworkPropertyMetadata(0
+                ,
+                new PropertyChangedCallback(propertyChangedCallback)
+                ));
 
+        public static void propertyChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+           // List<String> list = (List<string>)d;
+        }
 
         public DiagramControl()
         {
             InitializeComponent();
+
+          
+           
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -7,13 +7,13 @@
     </Category>
   </categories>
   <entries>
-    <Outcome>
+    <Income>
       <id>1</id>
-      <name>woda</name>
+      <name>pralka</name>
       <frequency>jednorazowy</frequency>
-      <amount>100</amount>
-      <begin>2021-01-29</begin>
-      <end>2021-01-29</end>
+      <amount>1500</amount>
+      <begin>2021-08-01</begin>
+      <end>2021-08-01</end>
       <duration>0</duration>
       <categoryID>1</categoryID>
       <category>
@@ -21,8 +21,40 @@
         <name>domowe</name>
       </category>
       <description />
-    </Outcome>
+    </Income>
+    <Income>
+      <id>4</id>
+      <name>lodóka</name>
+      <frequency>jednorazowy</frequency>
+      <amount>1500</amount>
+      <begin>2021-02-01</begin>
+      <end>2021-02-01</end>
+      <duration>0</duration>
+      <categoryID>1</categoryID>
+      <category>
+        <id>1</id>
+        <name>domowe</name>
+      </category>
+      <description />
+    </Income>
   </entries>
   <summaryList />
-  <wishes />
+  <wishes>
+    <Wish>
+      <id>1</id>
+      <name>samochod</name>
+      <frequency>jednorazowy</frequency>
+      <amount>20000</amount>
+      <begin>2021-01-01</begin>
+      <end>2021-01-01</end>
+      <duration>0</duration>
+      <categoryID>1</categoryID>
+      <category>
+        <id>1</id>
+        <name>domowe</name>
+      </category>
+      <description />
+      <wishDate>notspecified</wishDate>
+    </Wish>
+  </wishes>
 </MyViewModel>
