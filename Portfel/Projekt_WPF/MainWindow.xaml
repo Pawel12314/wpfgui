@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Projekt_WPF"
         mc:Ignorable="d"
         Title="Portfel - projekt WPF" x:Name="mainWindow"
-        
+        MinWidth="600"
+        MinHeight="300"
         
         WindowState="Maximized"
         >

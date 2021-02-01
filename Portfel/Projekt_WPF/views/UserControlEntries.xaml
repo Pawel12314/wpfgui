@@ -130,7 +130,7 @@
                     <Label x:Name="currentAmountLabel" Content="{Binding amount}"/>
                     <Label x:Name="currentCategoryLabel" Content="{Binding category.name}"/>
                     <Label x:Name="currentBeginDateLabel" Content="{Binding begin}"/>
-                    <Label x:Name="currentDurationLabel" Content="{Binding duration}"/>
+                    <Label x:Name="currentDurationLabel" Content="{Binding duration ,Converter={StaticResource durationConverter}}"/>
                     <Label x:Name="currentDescriptionLabel" Content="{Binding description}"/>
                 </StackPanel>
             </Grid>

@@ -20,12 +20,12 @@
         <ListBox Grid.Column="0" Name="categoryListBox">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding name}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Padding="10" Text="{Binding name}" >
                             
                         </TextBlock>
-                        <TextBlock Text="{Binding begin}"/>
-                        <TextBlock Text="{Binding end}"/>
+                        <TextBlock Padding="10" Text="{Binding begin}"/>
+                        <TextBlock Padding="10" Text="{Binding end}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
