@@ -48,7 +48,7 @@ namespace Projekt_WPF.views
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             categoryCombobox.ItemsSource = viewModel.categories;
-          
+            wishCategoryCombobox.ItemsSource = viewModel.wishgroups;
         }
 
         

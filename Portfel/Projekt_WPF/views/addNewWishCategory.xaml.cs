@@ -52,6 +52,8 @@ namespace Projekt_WPF.views
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+
+            
            
             saveCMD = new CommandTemplate(o => addCategory(), o => true);
             menuButtonsCreation.saveProperty = saveCMD;
