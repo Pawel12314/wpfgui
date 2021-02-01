@@ -27,7 +27,17 @@
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <ListBox ItemsSource="{Binding kategorie}" x:Name="categoriesListBox"   Grid.Column="0" Margin="10,5" MinHeight="120" MaxHeight="700" />
+            <ListBox HorizontalContentAlignment="Stretch" ItemsSource="{Binding kategorie}" x:Name="categoriesListBox"   Grid.Column="0" Margin="10,5" MinHeight="120" MaxHeight="700" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel
+                    Orientation="Horizontal" Style="{StaticResource itemStackPanel}">
+                        <TextBlock Text="{Binding name}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                
+            </ListBox>
             
                 <controls:ButtonsListControl Grid.Column="1" OrientationProperty="Vertical" MyWidthProperty="200" MyHeightProperty="75" x:Name="menubuttons"></controls:ButtonsListControl>
             

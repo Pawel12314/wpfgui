@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Projekt_WPF"
         mc:Ignorable="d"
         Title="Portfel - projekt WPF" x:Name="mainWindow"
-        MinWidth="600"
-        MinHeight="300"
+        MinWidth="1200"
+        MinHeight="400"
         
         WindowState="Maximized"
         >
@@ -55,59 +55,58 @@
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
-                <MenuItem Header="Widok">
-                    <MenuItem x:Name="menuItemViewStartScreen" Header="Ekran startowy" Click="menuItemViewStartScreen_Click"></MenuItem>
-                    <MenuItem x:Name="menuItemViewCategories" Header="Kategorie" Click="menuItemViewCategories_Click"></MenuItem>
-                    <Separator/>
-                    <MenuItem x:Name="menuItemViewEntries" Header="Dodawanie i edycja wpisów" Click="menuItemViewEntries_Click"></MenuItem>
-                    <Separator/>
-                    <MenuItem x:Name="menuItemViewSummary" Header="Podsumowanie" Click="menuItemViewSummary_Click"></MenuItem>
-                    <MenuItem x:Name="menuItemViewSummary2" Header="Podsumowanie2" Click="menuItemViewSummary_Click2"></MenuItem>
-                    <MenuItem x:Name="menuITemBudget" Header="budżet" Click="menuITemBudget_Click"></MenuItem>
-                   
-                    <MenuItem Name="newWishCategories" Header="kategorie Zyczen" Click="newWishCategories_Click"></MenuItem>
-                    <MenuItem Name="chartinout" Header="wykres przychodów i wydatków" Click="chartinout_Click"></MenuItem>
-                    <MenuItem Name="newbudget" Header="dodawanie budżetu" Click="newbudget_Click"></MenuItem>
-                </MenuItem>
-                <MenuItem Header="Opcje">
+                        <!--<MenuItem Header="Widok">
+                            <MenuItem x:Name="menuItemViewStartScreen" Header="Ekran startowy" Click="menuItemViewStartScreen_Click"></MenuItem>
+                            <MenuItem x:Name="menuItemViewCategories" Header="Kategorie" Click="menuItemViewCategories_Click"></MenuItem>
+                            <Separator/>
+                            <MenuItem x:Name="menuItemViewEntries" Header="Dodawanie i edycja wpisów" Click="menuItemViewEntries_Click"></MenuItem>
+                            <Separator/>
+                            <MenuItem x:Name="menuItemViewSummary" Header="Podsumowanie" Click="menuItemViewSummary_Click"></MenuItem>
+                            <MenuItem x:Name="menuItemViewSummary2" Header="Podsumowanie2" Click="menuItemViewSummary_Click2"></MenuItem>
+                            <MenuItem x:Name="menuITemBudget" Header="budżet" Click="menuITemBudget_Click"></MenuItem>
+
+                            <MenuItem Name="newWishCategories" Header="kategorie Zyczen" Click="newWishCategories_Click"></MenuItem>
+                            <MenuItem Name="chartinout" Header="wykres przychodów i wydatków" Click="chartinout_Click"></MenuItem>
+                            <MenuItem Name="newbudget" Header="dodawanie budżetu" Click="newbudget_Click"></MenuItem>
+                        </MenuItem>-->
+                        <MenuItem Header="Opcje">
                     <MenuItem x:Name="menuItemViewPersonalization" Header="Personalizacja" Click="menuItemViewPersonalization_Click"></MenuItem>
                 </MenuItem>
                 
             </Menu>
         </DockPanel>
-        <!---
-        <StackPanel Grid.Row="1">
-            <TextBlock>lista podsumowań</TextBlock>
-            <ListBox Name="listBoxSummary" ScrollViewer.HorizontalScrollBarVisibility="Disabled" MaxWidth="500"  SelectionChanged="openSummary">
-                <ListBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel IsItemsHost="True" />
-                    </ItemsPanelTemplate>
-                </ListBox.ItemsPanel>
-            </ListBox>
-        </StackPanel>
-        -->
-        <Frame x:Name="mainWindowFrame" Grid.Row="2" NavigationUIVisibility="Hidden" MinHeight="100" MinWidth="100">
-            
-        </Frame>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel VerticalAlignment="Center" Grid.Column="0" >
+                        <Button Style="{StaticResource Button}" x:Name="menuItemViewStartScreen" Content="Ekran startowy" Click="menuItemViewStartScreen_Click"></Button>
+                        <Button Style="{StaticResource Button}" x:Name="menuItemViewCategories" Content="Kategorie" Click="menuItemViewCategories_Click"></Button>
+
+                        <Button Style="{StaticResource Button}" x:Name="menuItemViewEntries" Content="Dodawanie i edycja wpisów" Click="menuItemViewEntries_Click"></Button>
+
+                        <!--<Button Style="{StaticResource Button}" x:Name="menuItemViewSummary" Content="Podsumowanie" Click="menuItemViewSummary_Click"></Button>
+                        <Button Style="{StaticResource Button}" x:Name="menuItemViewSummary2" Content="Podsumowanie2" Click="menuItemViewSummary_Click2"></Button>
+                        -->
+                        
+                        <Button Style="{StaticResource Button}" x:Name="menuITemBudget" Content="lista życzeń" Click="menuITemBudget_Click"></Button>
+
+                        <Button Style="{StaticResource Button}" Name="newWishCategories" Content="kategorie Zyczen" Click="newWishCategories_Click"></Button>
+                        <Button Style="{StaticResource Button}" Name="chartinout" Content="wykres przychodów i wydatków" Click="chartinout_Click"></Button>
+                        <Button Style="{StaticResource Button}" Name="newbudget" Content="dodawanie budżetu" Click="newbudget_Click"></Button>
+                    </StackPanel>
+
+                    <Frame x:Name="mainWindowFrame" Grid.Column="1" NavigationUIVisibility="Hidden" MinHeight="100" MinWidth="100">
+
+                    </Frame>
+                </Grid>
+       
         
     </Grid>
 
-            <Ellipse Height="30" Width="30" Margin="0,0,0,0"
- HorizontalAlignment="Right" VerticalAlignment="Bottom"
- Stroke="DarkGreen" StrokeThickness="3" 
-
-                     x:Name="myelipse">
-                
-                <Ellipse.Fill>
-                    <LinearGradientBrush>
-                        <GradientStop Color="Red" Offset="0.4"/>
-                        <GradientStop Color="Blue" Offset="0.5"/>
-                        <GradientStop Color="Yellow" Offset="0.8"/>
-                    </LinearGradientBrush>
-                </Ellipse.Fill>
-              
-            </Ellipse>
+            
 
         </Grid>
     </Border>

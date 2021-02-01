@@ -34,9 +34,63 @@
       </group>
       <groupID>4</groupID>
     </Entry>
+    <Income>
+      <id>1</id>
+      <name>pensja</name>
+      <frequency>comiesieczny</frequency>
+      <amount>2500</amount>
+      <begin>2021-02-01</begin>
+      <end>2022-02-01</end>
+      <duration>12</duration>
+      <categoryID>1</categoryID>
+      <category>
+        <id>1</id>
+        <name>praca</name>
+      </category>
+      <description />
+    </Income>
+    <Outcome>
+      <id>2</id>
+      <name>woda</name>
+      <frequency>comiesieczny</frequency>
+      <amount>100</amount>
+      <begin>2021-02-01</begin>
+      <end>2022-02-01</end>
+      <duration>12</duration>
+      <categoryID>2</categoryID>
+      <category>
+        <id>2</id>
+        <name>dom</name>
+      </category>
+      <description />
+    </Outcome>
   </entries>
   <summaryList />
-  <wishes />
+  <wishes>
+    <Wish>
+      <id>3</id>
+      <name>citroen</name>
+      <frequency>jednorazowy</frequency>
+      <amount>12000</amount>
+      <begin>2021-03-01</begin>
+      <end>2021-03-01</end>
+      <duration>0</duration>
+      <categoryID>1</categoryID>
+      <category>
+        <id>1</id>
+        <name>praca</name>
+      </category>
+      <description>używany</description>
+      <group>
+        <id>2</id>
+        <name>samochód</name>
+        <begin>2021-03-01</begin>
+        <end>2022-03-01</end>
+        <duration>12</duration>
+      </group>
+      <groupID>2</groupID>
+    </Wish>
+  </wishes>
   <wishgroups>
     <WishGroup>
       <id>4</id>
@@ -45,6 +99,34 @@
       <end>2022-03-01</end>
       <duration>12</duration>
     </WishGroup>
+    <WishGroup>
+      <id>2</id>
+      <name>samochód</name>
+      <begin>2021-03-01</begin>
+      <end>2022-03-01</end>
+      <duration>12</duration>
+    </WishGroup>
   </wishgroups>
-  <budget />
+  <budget>
+    <Budget>
+      <date>2021-02-01</date>
+      <amount>1200</amount>
+      <id>1</id>
+    </Budget>
+    <Budget>
+      <date>2021-03-01</date>
+      <amount>1200</amount>
+      <id>2</id>
+    </Budget>
+    <Budget>
+      <date>2021-04-01</date>
+      <amount>3000</amount>
+      <id>3</id>
+    </Budget>
+    <Budget>
+      <date>2021-07-01</date>
+      <amount>1900</amount>
+      <id>4</id>
+    </Budget>
+  </budget>
 </MyViewModel>

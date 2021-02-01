@@ -31,26 +31,26 @@
                     <ColumnDefinition Width="*"/>
                     
                 </Grid.ColumnDefinitions>
-                <ListBox Grid.Column="0" Name="wishesgroupsListbox" MinHeight="200" SelectionChanged="wishesgroupsListbox_SelectionChanged">
+                <ListBox Grid.Column="0" Name="wishesgroupsListbox" MinHeight="200" SelectionChanged="wishesgroupsListbox_SelectionChanged" HorizontalContentAlignment="Stretch">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding name}"></TextBlock>
-                            <TextBlock Text="{Binding begin}"></TextBlock>
-                            <TextBlock Text="{Binding end}"></TextBlock>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource itemStackPanel}">
+                            <TextBlock Padding="10" Text="{Binding name}"></TextBlock>
+                            <TextBlock Padding="10" Text="{Binding begin}"></TextBlock>
+                                <TextBlock Padding="10" Text="{Binding end}"></TextBlock>
                         </StackPanel>
                         
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-                <ListBox Grid.Column="1" Name="wishesListbox" MinHeight="200">
+                <ListBox Grid.Column="1" Name="wishesListbox" MinHeight="200" HorizontalContentAlignment="Stretch">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="{Binding name}"></TextBlock>
-                                <TextBlock Text="{Binding amount}"></TextBlock>
-                                <TextBlock Text="{Binding begin}"/>
-                                <TextBlock Text="{Binding end}"/>
+                            <StackPanel Orientation="Horizontal" Style="{StaticResource itemStackPanel}">
+                                <TextBlock Padding="10" Text="{Binding name}"></TextBlock>
+                                <TextBlock Padding="10" Text="{Binding amount}"></TextBlock>
+                                <TextBlock Padding="10" Text="{Binding begin}"/>
+                                <TextBlock Padding="10" Text="{Binding end}"/>
                             </StackPanel>
 
                         </DataTemplate>

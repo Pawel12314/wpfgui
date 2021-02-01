@@ -17,10 +17,10 @@
             <ColumnDefinition Width="auto"/>
             
         </Grid.ColumnDefinitions>
-        <ListBox Grid.Column="0" Name="categoryListBox">
+        <ListBox Grid.Column="0" Name="categoryListBox" HorizontalContentAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal" Style="{StaticResource itemStackPanel}" >
                         <TextBlock Padding="10" Text="{Binding name}" >
                             
                         </TextBlock>
