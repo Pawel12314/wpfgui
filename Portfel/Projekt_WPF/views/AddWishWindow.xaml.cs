@@ -39,7 +39,9 @@ namespace Projekt_WPF.views
             {
                 nameTextBox.Text = w.name;
                 durationTextBox.Text = w.duration.ToString();
-                categoryCombobox.SelectedItem = w.category;
+                amountTextBox.Text = w.amount.ToString();
+                categoryCombobox.SelectedItem = vm.categories.Where(item => item.id == w.categoryID).FirstOrDefault();
+                wishCategoryCombobox.SelectedItem = vm.wishgroups.Where(item=>item.id==w.groupID).FirstOrDefault();
                 beginDatePicker.SelectedDate = new DateTime(w.begin.Year, w.begin.Month, w.begin.Day);
                 id = w.id;
             }
@@ -129,7 +131,13 @@ namespace Projekt_WPF.views
             wish = new Wish(name, amount, ref category,ref group, Frequency.comiesieczny, begin, duration, description);
                        
             
-
+            if(id!=-1)
+            {
+                wish.id = id;
+                ((BudgetPage)((MainWindow)Application.Current.MainWindow).mainWindowFrame.Content).editWish(wish);
+                Close();
+                return;
+            }
             ((BudgetPage)((MainWindow)Application.Current.MainWindow).mainWindowFrame.Content).addWish(wish);
             
             //((BudgetPage)((MainWindow)Application.Current.MainWindow).mainWindowFrame.Content).addWish(wish);

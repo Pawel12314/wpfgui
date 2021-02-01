@@ -159,6 +159,31 @@ namespace Projekt_WPF.ViewModel
             }
             this.budget.OrderBy(o => o.date);
         }
+        public void editWish(Entry w)
+        {
+            for (int i = 0; i < wishes.Count; i++)
+            {
+                if (wishes[i].id == w.id)
+                {
+                    wishes[i] = w;
+                    break;
+                }
+            }
+           
+        }
+        public void deleteWish(Entry w)
+        {
+            for (int i = 0; i < wishes.Count; i++)
+            {
+                if(wishes[i].id == w.id)
+                {
+                    wishes.RemoveAt(i);
+                    break;
+                }
+            }
+        }
+
+        
         public void deleteWishGroup(WishGroup wishg)
         {
             for (int i = 0; i < wishgroups.Count; i++)

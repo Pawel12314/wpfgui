@@ -57,7 +57,7 @@ namespace Projekt_WPF.views
         private void deleteWishGroup()
         {
             WishGroup w =(WishGroup) categoryListBox.SelectedItem;
-            ((MainWindow)Application.Current.MainWindow).deleteWishgorup(w);
+            vm.deleteWishGroup(w);
         }
         private void opennewWindow()
         {
@@ -69,9 +69,11 @@ namespace Projekt_WPF.views
             categoryListBox.ItemsSource = vm.wishgroups;
             addCMD = new CommandTemplate(o =>opennewWindow(), o => true);
             editCMD = new CommandTemplate(o=>openEdittwindow(), o => true);
-
+            deleteCMD = new CommandTemplate(o => deleteWishGroup(), o => true);
             menubuttons.EditProperty = editCMD;
             menubuttons.AddProperty = addCMD;
+            menubuttons.DeleteProperty = deleteCMD;
+            
         }
     }
 }

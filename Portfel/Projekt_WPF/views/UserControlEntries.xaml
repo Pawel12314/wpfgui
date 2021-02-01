@@ -141,19 +141,6 @@
             
         </Grid>
         
-        <!---
-        <DataGrid Style="{StaticResource datagridStyle}"  x:Name="entriesDataGrid" ItemsSource="{Binding}" AutoGenerateColumns="False" Grid.Row="3" MinHeight="150" MaxHeight="400">
-            <DataGrid.Columns >
-                <DataGridTextColumn Header="Typ" Binding="{Binding Mode=OneWay, Converter={StaticResource typeConverter}}"/>
-                <DataGridTextColumn Header="Częstotliwość" Binding="{Binding frequency}"/>
-                <DataGridTextColumn Header="Data wpisu" Binding="{Binding begin}"/>
-                <DataGridTextColumn Header="Okres trwania" Binding="{Binding duration}"/>
-                <DataGridTextColumn Header="Nazwa" Binding="{Binding name}"/>
-                <DataGridTextColumn Header="Kwota" Binding="{Binding amount}"/>
-                <DataGridTextColumn Header="Kategoria" Binding="{Binding category}"/>
-                <DataGridTextColumn Header="Opis" Binding="{Binding description}"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        -->
+      
     </Grid>
 </Page>

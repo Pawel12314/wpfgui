@@ -34,7 +34,7 @@ namespace Projekt_WPF.views
         private ICollectionView viewgroups { get; set; }
         private ICollectionView viewwishes { get; set; }
 
-        private ICommand add { get; set; }
+      // private ICommand add { get; set; }
         public BudgetPage(MyViewModel vm)
         {
             this.vm = vm;
@@ -52,9 +52,10 @@ namespace Projekt_WPF.views
 
             wishesListbox.ItemsSource = vm.wishes;
 
-            add = new CommandTemplate(o => addWishButton_Click(),o => true);
-            menuButtons.AddProperty = add;
-          
+            addCMD = new CommandTemplate(o => addWishButton_Click(),o => true);
+            menuButtons.AddProperty = addCMD;
+            editCMD = new CommandTemplate(o => editwishCMD(), o => true);
+            menuButtons.EditProperty = editCMD;
 
             App.Current.Dispatcher.Invoke((Action)delegate
             {
@@ -66,12 +67,43 @@ namespace Projekt_WPF.views
             });
 
             addCMD = new CommandTemplate(o => openAddmenuWish(), o => true);
+            deleteCMD = new CommandTemplate(o => deleteWishCMD(), o => true);
+            menuButtons.DeleteProperty = deleteCMD;
         }
 
         private void addWishButton_Click()
         {
             var aww = new AddWishWindow(vm);
             aww.Show();
+        }
+        public bool isSelected()
+        {
+            if (wishesListbox.SelectedItem == null) return false;
+            return true;
+        }
+        private void editwishCMD()
+        {
+            if(isSelected()==false)
+            {
+                MessageBox.Show("musisz wybrać element");
+                return;
+            }
+            var aww = new AddWishWindow(vm,(Wish)wishesListbox.SelectedItem);
+            aww.Show();
+        }
+        public void editWish(Entry w)
+        {
+            vm.editWish(w);
+            
+        }
+        private void deleteWishCMD()
+        {
+            if (isSelected() == false)
+            {
+                MessageBox.Show("musisz wybrać element");
+                return;
+            }
+            vm.deleteWish((Entry)wishesListbox.SelectedItem);
         }
         public void addWish(Entry w)
         {
