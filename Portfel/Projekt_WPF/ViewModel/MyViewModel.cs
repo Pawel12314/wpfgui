@@ -99,6 +99,37 @@ namespace Projekt_WPF.ViewModel
             
             
         }
+        private ObservableCollection<Entry> addCateogryReference(List<Entry> items, ObservableCollection<Category> categories,ObservableCollection<Category> wishgroups)
+        {
+            ObservableCollection<Entry> entries = new ObservableCollection<Entry>();
+            for (int i = 0; i < items.Count; i++)
+            {
+                for (int u = 0; u < categories.Count; u++)
+                {
+                    if (items[i].categoryID == categories[u].id)
+                    {
+                        Entry e = items[i];
+                        e.category = categories[u];
+                        entries.Add(e);
+                    }
+                }
+            }
+            for (int i = 0; i < entries.Count; i++)
+            {
+                for (int u = 0; u < wishgroups.Count; u++)
+                {
+                    if (((Wish)items[i]).groupID == wishgroups[u].id)
+                    {
+                        ((Wish)items[i]).group = (WishGroup)wishgroups[u];
+                       
+                    }
+                }
+            }
+            return entries;
+
+
+
+        }
         public void addBudget(Budget b)
         {
             this.budget.Add(b);
@@ -128,6 +159,18 @@ namespace Projekt_WPF.ViewModel
             }
             this.budget.OrderBy(o => o.date);
         }
+        public void deleteWishGroup(WishGroup wishg)
+        {
+            for (int i = 0; i < wishgroups.Count; i++)
+            {
+                if (wishgroups[i].id == wishg.id)
+                {
+                    wishgroups.RemoveAt(i);
+                    break;
+                }
+            }
+            this.budget.OrderBy(o => o.date);
+        }
         public void deserialize(string filename)
         {
             FileStream fs = new FileStream(filename, FileMode.Open);
@@ -139,7 +182,7 @@ namespace Projekt_WPF.ViewModel
 
             this.categories = mvm.categories;
             this.entries = this.addCateogryReference(mvm.entries.OrderBy(item=>item.categoryID).ToList(),mvm.categories);
-            this.wishes = this.addCateogryReference(mvm.wishes.OrderBy(item=>item.categoryID).ToList(),mvm.categories);
+            this.wishes = this.addCateogryReference(mvm.wishes.OrderBy(item=>item.categoryID).ToList(),mvm.categories,mvm.wishgroups);
             this.wishgroups = mvm.wishgroups;
             this.summaryList = mvm.summaryList;
             //this.wishes = mvm.wishes;

@@ -54,11 +54,16 @@ namespace Projekt_WPF.views
 
             add = new CommandTemplate(o => addWishButton_Click(),o => true);
             menuButtons.AddProperty = add;
-            viewgroups =
-            CollectionViewSource.GetDefaultView(wishesgroupsListbox.ItemsSource);
-            viewgroups.Filter = FilterDate;
-            viewwishes = CollectionViewSource.GetDefaultView(wishesListbox.ItemsSource);
-            viewwishes.Filter = FilterWishGroup;
+          
+
+            App.Current.Dispatcher.Invoke((Action)delegate
+            {
+                viewgroups =
+           CollectionViewSource.GetDefaultView(wishesgroupsListbox.ItemsSource);
+                viewgroups.Filter = FilterDate;
+                viewwishes = CollectionViewSource.GetDefaultView(wishesListbox.ItemsSource);
+                viewwishes.Filter = FilterWishGroup;
+            });
 
             addCMD = new CommandTemplate(o => openAddmenuWish(), o => true);
         }
@@ -71,13 +76,19 @@ namespace Projekt_WPF.views
         public void addWish(Entry w)
         {
             vm.wishes.Add(w);
+            refreshView();
+            // wishesListbox.Items.Refresh();
             //definedWishesListBox.Items.Refresh();
-            wishesListbox.Items.Refresh();
+            //wishesgroupsListbox.Items.Refresh();
+
         }
         public bool FilterWishGroup(Object item)
         {
-
-
+            if(wishesgroupsListbox.SelectedItem==null)
+            {
+                return true;
+            }
+            
             Wish w = (Wish)item;
             if(w.groupID==((WishGroup)wishesgroupsListbox.SelectedItem).id)
             {
@@ -85,6 +96,16 @@ namespace Projekt_WPF.views
 
             }
             return false;
+        }
+        private void refreshView()
+        {
+            if (this.viewgroups != null)
+                viewgroups.Refresh();
+
+            if (this.viewwishes != null)
+                viewwishes.Refresh();
+
+
         }
         public bool FilterDate(Object item)
         {
@@ -132,7 +153,7 @@ namespace Projekt_WPF.views
             if (this.viewgroups != null)
                 viewgroups.Refresh();
         }
-
+       
         private void wishesgroupsListbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             viewwishes.Refresh();

@@ -29,6 +29,7 @@ namespace Projekt_WPF.views
 
         private ICommand addCMD { get; set; }
         private ICommand editCMD { get; set; }
+        private ICommand deleteCMD { get; set; }
         public newwishCategorypageView(MyViewModel vm)
         {
             InitializeComponent();
@@ -53,7 +54,11 @@ namespace Projekt_WPF.views
             }
            
         }
-
+        private void deleteWishGroup()
+        {
+            WishGroup w =(WishGroup) categoryListBox.SelectedItem;
+            ((MainWindow)Application.Current.MainWindow).deleteWishgorup(w);
+        }
         private void opennewWindow()
         {
             MessageBox.Show("opening new menu creatr");

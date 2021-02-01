@@ -88,6 +88,8 @@ namespace Projekt_WPF.views
                 wg.id = id;
                 ((MainWindow)Application.Current.MainWindow).editWishGroup(wg);
                 Close();
+
+                return;
             }
 
             

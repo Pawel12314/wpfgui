@@ -11,7 +11,7 @@ namespace Projekt_WPF.models
     {
         public LocalDate begin { get; set; }
         public LocalDate end { get; set; }
-        public static int maxID { get; set; }
+        //public static int maxID { get; set; }
         public int duration { get; set; }
         public WishGroup()
         {

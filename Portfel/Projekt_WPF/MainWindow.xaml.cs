@@ -183,13 +183,15 @@ namespace Projekt_WPF
 
         public void editWishGroup(WishGroup w)
         {
-            for(int i=0;i<vm.wishgroups.Count;++i)
+            for (int i = 0; i < vm.wishgroups.Count; ++i)
             {
-                if(w.id==vm.wishgroups[i].id)
+                if (w.id == vm.wishgroups[i].id)
                 {
                     vm.wishgroups[i] = w;
                 }
             }
+            budgetPage.wishesgroupsListbox.Items.Refresh();
+            budgetPage.wishesListbox.Items.Refresh();
         }
         public void addCategory(Category cat)
         {
@@ -250,6 +252,11 @@ namespace Projekt_WPF
         {
             resizing = false;
             Mouse.Capture(null);
+        }
+
+        public void deleteWishgorup(WishGroup g)
+        {
+            vm.deleteWishGroup(g);
         }
     }
 }

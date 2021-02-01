@@ -13,29 +13,7 @@
   <entries />
   <summaryList />
   <wishes>
-    <Wish>
-      <id>2</id>
-      <name>konsola do giew</name>
-      <frequency>jednorazowy</frequency>
-      <amount>1500</amount>
-      <begin>2021-02-01</begin>
-      <end>2021-02-01</end>
-      <duration>0</duration>
-      <categoryID>1</categoryID>
-      <category>
-        <id>1</id>
-        <name>praca</name>
-      </category>
-      <description />
-      <group>
-        <id>1</id>
-        <name>prezent</name>
-        <begin>2021-07-01</begin>
-        <end>2022-07-01</end>
-        <duration>0</duration>
-      </group>
-      <groupID>1</groupID>
-    </Wish>
+    
   </wishes>
   <wishgroups>
     <WishGroup>
