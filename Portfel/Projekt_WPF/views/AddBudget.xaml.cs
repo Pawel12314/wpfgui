@@ -76,7 +76,10 @@ namespace Projekt_WPF.views
             LocalDate date = new LocalDate(beginDatePicker.SelectedDate.Value.Year, beginDatePicker.SelectedDate.Value.Month, 1);
             if (vm.budget.Where(elem => elem.date.Year == date.Year & elem.date.Month == date.Month).Any())
             {
-                MessageBox.Show("już jest wpis w budżecie dla tego miesiąca");
+                Budget budget1 = new Budget(date, val);
+                budget1.id = vm.budget.Where(elem => elem.date.Year == date.Year & elem.date.Month == date.Month).First().id;
+                ((MainWindow)Application.Current.MainWindow).editBudget(budget1);
+                Close();
                 return;
             }
 
@@ -84,12 +87,7 @@ namespace Projekt_WPF.views
            // budget.id = id;
             if (isedit == false)
                 ((MainWindow)Application.Current.MainWindow).addBudget(budget);
-            else
-            {
-                budget.id = id;
-                ((MainWindow)Application.Current.MainWindow).editBudget(budget);
-            }
-                
+            
             Close();
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)

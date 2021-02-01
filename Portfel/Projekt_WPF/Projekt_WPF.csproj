@@ -89,6 +89,7 @@
       <DependentUpon>SummaryEntry.xaml</DependentUpon>
     </Compile>
     <Compile Include="conversion2\ColumnDiagramConversion.cs" />
+    <Compile Include="conversion2\durationToTextConverter.cs" />
     <Compile Include="conversion2\EntryTypeConverter.cs" />
     <Compile Include="conversion2\TypeFilter.cs" />
     <Compile Include="Filters\DateWishFilter.xaml.cs">

@@ -238,9 +238,11 @@ C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Relea
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\userControls\ButtonsListControl.g.cs
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\userControls\creationgButtonsControl.g.cs
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\AddBudget.g.cs
+C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\addNewWishCategory.g.cs
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\AddWishWindow.g.cs
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\BudgetPage.g.cs
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\ChartWindow.g.cs
+C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\WishCategorypageView.g.cs
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\SummareCreatePage.g.cs
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\SummaryPage.g.cs
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\UserControlCategories.g.cs
@@ -263,9 +265,11 @@ C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Relea
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\userControls\ButtonsListControl.baml
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\userControls\creationgButtonsControl.baml
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\AddBudget.baml
+C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\addNewWishCategory.baml
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\AddWishWindow.baml
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\BudgetPage.baml
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\ChartWindow.baml
+C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\WishCategorypageView.baml
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\SummareCreatePage.baml
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\SummaryPage.baml
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\UserControlCategories.baml
@@ -284,7 +288,3 @@ C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Relea
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\Projekt_WPF.csproj.CopyComplete
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\Projekt_WPF.exe
 C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\Projekt_WPF.pdb
-C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\addNewWishCategory.g.cs
-C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\WishCategorypageView.g.cs
-C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\addNewWishCategory.baml
-C:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\obj\Release\views\WishCategorypageView.baml

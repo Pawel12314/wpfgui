@@ -10,6 +10,7 @@
       Loaded="Page_Loaded"
        xmlns:mn="clr-namespace:Projekt_WPF"
       xmlns:mycontrols="clr-namespace:Projekt_WPF.userControls"
+      Name="wishesmainwindow"
       >
 
     <Grid>
@@ -28,6 +29,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
+                    
                 </Grid.ColumnDefinitions>
                 <ListBox Grid.Column="0" Name="wishesgroupsListbox" MinHeight="200" SelectionChanged="wishesgroupsListbox_SelectionChanged">
                 <ListBox.ItemTemplate>
@@ -47,15 +49,22 @@
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="{Binding name}"></TextBlock>
                                 <TextBlock Text="{Binding amount}"></TextBlock>
-                                
+                                <TextBlock Text="{Binding begin}"/>
+                                <TextBlock Text="{Binding end}"/>
                             </StackPanel>
 
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
+                
             </Grid>
-           
-            <mycontrols:ButtonsListControl MyWidthProperty="250" MyHeightProperty="100" x:Name="menuButtons" OrientationProperty="Horizontal" ></mycontrols:ButtonsListControl>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <mycontrols:ButtonsListControl MyWidthProperty="150" MyHeightProperty="100" x:Name="menuButtons" OrientationProperty="Horizontal" ></mycontrols:ButtonsListControl>
+                <Button Name="moveButton" Grid.Column="2" Width="150" Height="100" Style="{StaticResource deleteButton}" Command="{Binding  moveCMD, ElementName=wishesmainwindow}">
+                    przenieś
+                </Button>
+            </StackPanel>
+            
         </StackPanel>
 
       

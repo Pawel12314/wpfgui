@@ -182,8 +182,15 @@ namespace Projekt_WPF.ViewModel
                 }
             }
         }
-
-        
+        public void  movewishtoEntries(Entry w)
+        {
+            addEntry(w);
+            deleteWish(w);
+        }
+        public void addEntry(Entry w)
+        {
+            entries.Add(w);
+        }
         public void deleteWishGroup(WishGroup wishg)
         {
             for (int i = 0; i < wishgroups.Count; i++)

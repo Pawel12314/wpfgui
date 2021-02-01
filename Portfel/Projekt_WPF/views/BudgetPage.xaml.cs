@@ -31,6 +31,7 @@ namespace Projekt_WPF.views
         private ICommand addCMD { get; set; }
         private ICommand editCMD { get; set; }
         private ICommand deleteCMD { get; set; }
+        private ICommand moveCMD { get; set; }
         private ICollectionView viewgroups { get; set; }
         private ICollectionView viewwishes { get; set; }
 
@@ -69,8 +70,20 @@ namespace Projekt_WPF.views
             addCMD = new CommandTemplate(o => openAddmenuWish(), o => true);
             deleteCMD = new CommandTemplate(o => deleteWishCMD(), o => true);
             menuButtons.DeleteProperty = deleteCMD;
+            
+            moveCMD = new CommandTemplate(o => moveWishToEntries(), o => true);
+            this.moveButton.Command = moveCMD;
         }
-
+        private void moveWishToEntries()
+        {
+            if(isSelected()==false)
+            {
+                MessageBox.Show("nie wybrano elementu");
+                return;
+            }
+            
+            vm.movewishtoEntries((Entry)wishesListbox.SelectedItem);
+        }
         private void addWishButton_Click()
         {
             var aww = new AddWishWindow(vm);

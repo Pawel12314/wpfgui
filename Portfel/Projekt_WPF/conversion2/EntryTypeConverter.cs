@@ -28,13 +28,13 @@ namespace Projekt_WPF.conversion2
             //MessageBox.Show(s);
             if (typeAsString == "Income")
             {
-                return new SolidColorBrush(Colors.LightCoral);
+                return new SolidColorBrush(Colors.LightBlue);
             }
             else if (typeAsString == "Outcome")
             {
-                return new SolidColorBrush(Colors.LightBlue);
+                return new SolidColorBrush(Colors.LightCoral);
             }
-            else return new SolidColorBrush(Colors.Green);
+            else return new SolidColorBrush(Colors.LightSeaGreen);
             
             
         }

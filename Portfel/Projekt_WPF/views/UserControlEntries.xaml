@@ -17,7 +17,8 @@
     <Page.Resources>
         <convrtrs:ObjectToTypeConverter x:Key="typeConverter"/>
         <myconverters:EntryTypeConverter x:Key="mytypeConverter"/>
-        
+        <myconverters:durationToTextConverter x:Key="durationConverter"/>
+
     </Page.Resources>
     <Grid x:Name="mainGrid" Background="WhiteSmoke" Margin="5">
         <Grid.RowDefinitions>
@@ -99,17 +100,17 @@
                         <DataTemplate>
                             <Grid Background="{Binding Mode=OneWay, Converter={StaticResource mytypeConverter}}" MinWidth="400">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition SharedSizeGroup="A" Width="*" MinWidth="200"/>
+                                    <ColumnDefinition SharedSizeGroup="A" Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Column="0" TextTrimming="CharacterEllipsis"   Text="{Binding Path= name}"/>
-                                <TextBlock Grid.Column="1" TextTrimming="CharacterEllipsis" Text="{Binding Path=amount}"/>
-                                <TextBlock Grid.Column="2" TextTrimming="CharacterEllipsis" Text="{Binding Path=category.name}"/>
-                                <TextBlock Grid.Column="3" TextTrimming="CharacterEllipsis"  Text="{Binding Path=begin}"/>
-                                <TextBlock Grid.Column="4" TextTrimming="CharacterEllipsis" Text="{Binding Path=duration}"/>
+                                <TextBlock Padding="10" Grid.Column="0" TextTrimming="CharacterEllipsis"   Text="{Binding Path= name}"/>
+                                <TextBlock Padding="10" Grid.Column="1" TextTrimming="CharacterEllipsis" Text="{Binding Path=amount}"/>
+                                <TextBlock Padding="10" Grid.Column="2" TextTrimming="CharacterEllipsis" Text="{Binding Path=category.name}"/>
+                                <TextBlock Padding="10" Grid.Column="3" TextTrimming="CharacterEllipsis"  Text="{Binding Path=begin}"/>
+                                <TextBlock Padding="10" Grid.Column="4"  TextTrimming="CharacterEllipsis" Text="{Binding Path=duration, Converter={StaticResource durationConverter}}"/>
                             </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>

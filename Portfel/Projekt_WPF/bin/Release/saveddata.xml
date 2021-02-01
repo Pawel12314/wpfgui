@@ -10,47 +10,40 @@
       <name>dom</name>
     </Category>
   </categories>
-  <entries />
-  <summaryList />
-  <wishes>
-    <Wish>
+  <entries>
+    <Entry xsi:type="Wish">
       <id>1</id>
       <name>konsola do gier</name>
       <frequency>jednorazowy</frequency>
       <amount>1500</amount>
-      <begin>2021-06-01</begin>
-      <end>2021-06-01</end>
+      <begin>2021-03-01</begin>
+      <end>2021-03-01</end>
       <duration>0</duration>
-      <categoryID>1</categoryID>
+      <categoryID>2</categoryID>
       <category>
-        <id>1</id>
-        <name>praca</name>
+        <id>2</id>
+        <name>dom</name>
       </category>
       <description />
       <group>
-        <id>1</id>
+        <id>4</id>
         <name>prezent</name>
-        <begin>2021-07-01</begin>
-        <end>2022-07-01</end>
-        <duration>0</duration>
+        <begin>2021-03-01</begin>
+        <end>2022-03-01</end>
+        <duration>12</duration>
       </group>
-      <groupID>1</groupID>
-    </Wish>
-  </wishes>
+      <groupID>4</groupID>
+    </Entry>
+  </entries>
+  <summaryList />
+  <wishes />
   <wishgroups>
     <WishGroup>
-      <id>1</id>
+      <id>4</id>
       <name>prezent</name>
-      <begin>2021-07-01</begin>
-      <end>2022-07-01</end>
-      <duration>0</duration>
-    </WishGroup>
-    <WishGroup>
-      <id>2</id>
-      <name>samochod</name>
       <begin>2021-03-01</begin>
       <end>2022-03-01</end>
-      <duration>0</duration>
+      <duration>12</duration>
     </WishGroup>
   </wishgroups>
   <budget />

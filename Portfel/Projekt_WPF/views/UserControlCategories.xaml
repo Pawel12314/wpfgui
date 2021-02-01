@@ -25,12 +25,12 @@
         <Grid Grid.Row="1" Margin="10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <ListBox ItemsSource="{Binding kategorie}" x:Name="categoriesListBox"   Grid.Column="0" Margin="10,5" MinHeight="120" MaxHeight="700" />
-            <Grid Grid.Column="1">
-                <controls:ButtonsListControl OrientationProperty="Vertical" MyWidthProperty="200" MyHeightProperty="75" x:Name="menubuttons"></controls:ButtonsListControl>
-            </Grid> 
+            
+                <controls:ButtonsListControl Grid.Column="1" OrientationProperty="Vertical" MyWidthProperty="200" MyHeightProperty="75" x:Name="menubuttons"></controls:ButtonsListControl>
+            
         </Grid>
     
         </Grid>
