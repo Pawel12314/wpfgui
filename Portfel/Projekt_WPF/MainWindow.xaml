@@ -64,7 +64,7 @@
                     <MenuItem x:Name="menuItemViewSummary" Header="Podsumowanie" Click="menuItemViewSummary_Click"></MenuItem>
                     <MenuItem x:Name="menuItemViewSummary2" Header="Podsumowanie2" Click="menuItemViewSummary_Click2"></MenuItem>
                     <MenuItem x:Name="menuITemBudget" Header="budżet" Click="menuITemBudget_Click"></MenuItem>
-                    <MenuItem Name="newCategoeries" Header="nowe kategorie" Click="newCategoeries_Click"></MenuItem>
+                   
                     <MenuItem Name="newWishCategories" Header="kategorie Zyczen" Click="newWishCategories_Click"></MenuItem>
                     <MenuItem Name="chartinout" Header="wykres przychodów i wydatków" Click="chartinout_Click"></MenuItem>
                     <MenuItem Name="newbudget" Header="dodawanie budżetu" Click="newbudget_Click"></MenuItem>
@@ -92,11 +92,23 @@
         </Frame>
         
     </Grid>
-            
-        <Ellipse Height="20" Width="20" Margin="0,0,0,0"
+
+            <Ellipse Height="30" Width="30" Margin="0,0,0,0"
  HorizontalAlignment="Right" VerticalAlignment="Bottom"
- Stroke="DarkGreen" StrokeThickness="3" Fill="LawnGreen"
- Cursor="ScrollSE"/>
+ Stroke="DarkGreen" StrokeThickness="3" 
+
+                     x:Name="myelipse">
+                
+                <Ellipse.Fill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="Red" Offset="0.4"/>
+                        <GradientStop Color="Blue" Offset="0.5"/>
+                        <GradientStop Color="Yellow" Offset="0.8"/>
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+              
+            </Ellipse>
+
         </Grid>
     </Border>
 </Window>
