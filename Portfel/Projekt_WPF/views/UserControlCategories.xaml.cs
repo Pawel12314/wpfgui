@@ -1,6 +1,6 @@
 ﻿using Projekt_WPF.commands;
 using Projekt_WPF.models;
-using Projekt_WPF.models.patterns.CategoryPatterns.FactoryMethod;
+
 using Projekt_WPF.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -89,37 +89,23 @@ namespace Projekt_WPF.views
 
         
 
-        private void newCategoryButton_Click(object sender , RoutedEventArgs e )
-        {
-            //var temp = new WindowNewCategory();
-            //temp.Show();
-            newCategoryCMD.Execute(1);
-        }
-
-        private void editCategoryButton_Click(object sender, RoutedEventArgs e)
-        {
-            editCategoryCMD.Execute(1);
-        }
-
-        private void deleteCategoryButton_Click(object sender, RoutedEventArgs e)
-        {
-            deleteCategoryCMD.Execute(1);
-        }
+      
         public void newCategoryCmd()
         {
-            var temp = new addNewCategory( new FactoryCategoryCreator());
+            var temp = new WindowNewCategory();
             temp.ShowDialog();
         }
         public void editCategoryCmd()
         {
+            if (isSelected() == false) return;
             Category sCategory = (Category)categoriesListBox.SelectedItem;
             var temp = new WindowEditCategory(sCategory);
             temp.ShowDialog();
         }
         public void deleteCategoryCmd()
         {
-            ;
-            if(MessageBox.Show("Czy na pewno chcesz usunąć kategorię " + categoriesListBox.SelectedItem.ToString(), "Usuwanie kategorii", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            if (isSelected() == false) return;
+            if (MessageBox.Show("Czy na pewno chcesz usunąć kategorię " + categoriesListBox.SelectedItem.ToString(), "Usuwanie kategorii", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 Category kat = (Category)categoriesListBox.SelectedItem;
                 ((UserControlCategories)((MainWindow)Application.Current.MainWindow).mainWindowFrame.Content).usunKategorie(kat);
@@ -128,10 +114,12 @@ namespace Projekt_WPF.views
        
         private bool isSelected()
         {
+            
             if(categoriesListBox.SelectedItem!=null)
             {
                 return true;
             }
+            MessageBox.Show("nie wybrano żadnego elemetntu");
             return false;
         }
         private void loadWindow(object sender, RoutedEventArgs e)
@@ -144,13 +132,13 @@ namespace Projekt_WPF.views
            
             editCategoryCMD = new CommandTemplate(o => editCategoryCmd(), o =>
             
-                isSelected()
+                true
             
             );
            
            
 
-            deleteCategoryCMD = new CommandTemplate(o => deleteCategoryCmd(), o => isSelected());
+            deleteCategoryCMD = new CommandTemplate(o => deleteCategoryCmd(), o =>true);
 
             menubuttons.AddProperty = newCategoryCMD;
             menubuttons.EditProperty = editCategoryCMD;

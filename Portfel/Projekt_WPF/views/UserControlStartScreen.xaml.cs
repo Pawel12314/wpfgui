@@ -30,7 +30,7 @@ namespace Projekt_WPF.views
         public UserControlStartScreen(MyViewModel vm)
         {
             this.vm = vm;
-            vm.deserialize("saveddata.xml");
+            //vm.deserialize("saveddata.xml");
             addCommmand = new CommandTemplate(o => PrintHello(), o => true);
 
             InitializeComponent();

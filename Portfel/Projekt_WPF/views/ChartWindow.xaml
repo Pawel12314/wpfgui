@@ -6,8 +6,17 @@
         xmlns:local="clr-namespace:Projekt_WPF.views"
         mc:Ignorable="d"
         xmlns:dv="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
-        Title="ChartWindow" Height="450" Width="800">
-    <Grid>
+        Title="ChartWindow" Height="800" Width="800"
+        Loaded="Window_Loaded"
+        Name="chartwindow"
+        xmlns:conv="clr-namespace:Projekt_WPF.conversion2"
+        >
+    <Window.Resources>
+        <conv:EntryTypeConverter x:Key="dataConv"></conv:EntryTypeConverter>
+    </Window.Resources>
+    
+        <Grid>
+        
         <dv:Chart Grid.Row="3" Name="Chart1" Title="Test Chart" >
 
             <!--<dv:LineSeries Title="Price"
@@ -24,16 +33,16 @@
             -->
 
             <dv:LineSeries Title="Tax"
-                            ItemsSource="{Binding entries, Delay=2500, IsAsync=False}"
-                            IndependentValueBinding="{Binding name}"
+                            ItemsSource="{Binding budget, Delay=2500, IsAsync=False}"
+                            IndependentValueBinding="{Binding date}"
                             DependentValueBinding="{Binding amount}">
 
                 <dv:LineSeries.DependentRangeAxis>
-                    <dv:LinearAxis Orientation="Y" Title="Tax" Minimum="0" Maximum="2000" Interval="2.5"/>
+                    <dv:LinearAxis Orientation="Y" Title="Tax" Minimum="0" Maximum="10000" Interval="1000"/>
                 </dv:LineSeries.DependentRangeAxis>
             </dv:LineSeries>
             <dv:Chart.Axes>
-                <dv:LinearAxis Orientation="X" Title="X-Axis" Interval="2" ShowGridLines="True"/>
+                <dv:LinearAxis Orientation="X" Title="X-Axis" Interval="2" ShowGridLines="True" />
             </dv:Chart.Axes>
         </dv:Chart>
     </Grid>

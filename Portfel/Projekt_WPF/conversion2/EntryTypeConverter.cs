@@ -34,7 +34,7 @@ namespace Projekt_WPF.conversion2
             {
                 return new SolidColorBrush(Colors.LightBlue);
             }
-            else return new SolidColorBrush(Colors.White);
+            else return new SolidColorBrush(Colors.Green);
             
             
         }

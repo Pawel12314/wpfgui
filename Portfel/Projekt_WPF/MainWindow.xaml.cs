@@ -20,7 +20,8 @@ using System.Collections.ObjectModel;
 using NodaTime;
 using Projekt_WPF.models.range;
 using Projekt_WPF.commands;
-using Projekt_WPF.models.patterns.CategoryPatterns.categoryPage;
+
+
 
 namespace Projekt_WPF
 {
@@ -38,10 +39,12 @@ namespace Projekt_WPF
         public static views.SummaryPage summaryPage;
         public static views.SummareCreatePage summaryCreatePage;
         public static views.BudgetPage budgetPage;
-        public static views.newCategorypageView categoriesPage;
-        public static views.newCategorypageView categorieswishPage;
-        public static MyViewModel vm { get; set; }
+       // public static views.newCategorypageView categoriesPage;
+        public static views.newwishCategorypageView categorieswishPage;
+        //public static views.ChartWindow incomeoutcomechart;
 
+        public static MyViewModel vm { get; set; }
+        
         public CommandTemplate nextSummary { get; set; }
         //public static ObservableCollection<Summary> summaryList { get; set; }
 
@@ -68,8 +71,10 @@ namespace Projekt_WPF
             summaryPage = new views.SummaryPage();
             summaryCreatePage = new views.SummareCreatePage(vm);
             budgetPage = new views.BudgetPage(vm);
-            categoriesPage = new views.newCategorypageView(vm, new FactoryCategoryPage());
-            categorieswishPage = new views.newCategorypageView(vm, new FactoryWishCategoryPage());
+           // categoriesPage = new views.newCategorypageView(vm);
+            categorieswishPage = new views.newwishCategorypageView(vm);
+
+            
     }
         public MainWindow()
         {
@@ -175,19 +180,76 @@ namespace Projekt_WPF
         {
             vm.wishgroups.Add(wishgroup);
         }
+
+        public void editWishGroup(WishGroup w)
+        {
+            for(int i=0;i<vm.wishgroups.Count;++i)
+            {
+                if(w.id==vm.wishgroups[i].id)
+                {
+                    vm.wishgroups[i] = w;
+                }
+            }
+        }
         public void addCategory(Category cat)
         {
             vm.categories.Add(cat);
         }
-
+        public void addBudget(Budget budget)
+        {
+            vm.addBudget(budget);
+        }
+        public void editBudget(Budget budget)
+        {
+            vm.editBudget(budget);
+        }
         private void newCategoeries_Click(object sender, RoutedEventArgs e)
         {
-            mainWindowFrame.Content = categoriesPage;
+            //mainWindowFrame.Content = categoriesPage;
         }
 
         private void newWishCategories_Click(object sender, RoutedEventArgs e)
         {
             mainWindowFrame.Content = categorieswishPage;
+        }
+
+        private void chartinout_Click(object sender, RoutedEventArgs e)
+        {
+            var incomeoutcomechart = new views.ChartWindow(vm);
+            incomeoutcomechart.Show();
+        }
+
+      
+
+        private void newbudget_Click(object sender, RoutedEventArgs e)
+        {
+            var budget = new AddBudget(vm);
+            budget.Show();
+        }
+        private bool resizing = false;
+       
+       
+       
+
+        private void Resize_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (resizing)
+            {
+                ((UIElement)e.Source).CaptureMouse();
+                Width = e.GetPosition(this).X;
+                Height = e.GetPosition(this).Y;
+            }
+        }
+
+        private void Resize_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            resizing = true;
+        }
+
+        private void Resize_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            resizing = false;
+            Mouse.Capture(null);
         }
     }
 }

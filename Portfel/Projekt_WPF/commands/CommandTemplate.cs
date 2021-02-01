@@ -14,7 +14,7 @@ namespace Projekt_WPF.commands
         public Type OwnerType { get; }
 
         private Action<object> execute;
-        private Func<object, bool> canExecute;
+        private Func<object, bool> canExecuteFun;
 
         public event EventHandler CanExecuteChanged;
 
@@ -24,15 +24,15 @@ namespace Projekt_WPF.commands
         {
             
             this.execute = execute;
-            this.canExecute = canExecute;
+            this.canExecuteFun = canExecute;
         
         }
 
 
-        public bool CanExecute(object parameter)
+        public  bool CanExecute(object parameter)
         {
-            return this.canExecute(parameter);
-            
+             return this.canExecuteFun(parameter);
+            //return parameter != null;
         }
 
 

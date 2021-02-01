@@ -2,6 +2,7 @@
 using Projekt_WPF.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -26,34 +27,20 @@ namespace Projekt_WPF.views
 
         private ICollectionView view{get;set;}
         private MyViewModel vm { get; set; }
-        private List<Income> incomes { get; set; }
+        private ObservableCollection<Income> incomes { get; set; }
         
-        private List<Outcome> outcomes { get; set; }
+        private ObservableCollection<Outcome> outcomes { get; set; }
         public ChartWindow(MyViewModel vm)
         {
             InitializeComponent();
             this.vm = vm;
+            DataContext = this.vm;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.DataContext = vm;
-            incomes = new List<Income>();
-            outcomes = new List<Outcome>();
-
-            for(int i = 0;i<vm.entries.Count;++i)
-            {
-                Entry e = vm.entries[i];
-                if(e is Income)
-                {
-                    incomes.Add((Income)e);
-                }
-                else if(e is Outcome)
-                {
-                    outcomes.Add((Outcome)e);
-                }
-            }
-        },
+           
+        }
 
         
     }

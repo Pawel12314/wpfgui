@@ -63,7 +63,7 @@ namespace Projekt_WPF.views
                     Category Ctmp = temp.Where(item => item.id == c.id).First();
                     included.Add(Ctmp);
                 }
-                catch(Exception e)
+                catch
                 {
 
                 }
@@ -84,7 +84,7 @@ namespace Projekt_WPF.views
                     Category Ctmp = temp.Where(item => item.id == c.id).First();
                     excluded.Add(Ctmp);
                 }
-                catch (Exception e)
+                catch 
                 {
 
                 }

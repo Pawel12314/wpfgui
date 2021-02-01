@@ -115,7 +115,7 @@ namespace Projekt_WPF.models
                 string json = JsonConvert.SerializeObject(list, Formatting.Indented, settings);
                 File.WriteAllText(filename, json);
             }
-            catch (Exception e)
+            catch 
             {
                 File.Delete(filename);
                 //File.Move(filename + ".copy", filename);
@@ -135,7 +135,7 @@ namespace Projekt_WPF.models
                 wpisy = JsonConvert.DeserializeObject<List<Entry>>(json, settings);
 
             }
-            catch (Exception e)
+            catch
             {
                 wpisy = new List<Entry>();
             }

@@ -40,7 +40,7 @@ namespace Projekt_WPF.views {
     /// <summary>
     /// addNewCategory
     /// </summary>
-    public partial class addNewCategory : System.Windows.Window, System.Windows.Markup.IComponentConnector {
+    public partial class addwishNewCategory : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
         #line 21 "..\..\..\views\addNewCategory.xaml"
@@ -122,7 +122,7 @@ namespace Projekt_WPF.views {
             case 1:
             
             #line 10 "..\..\..\views\addNewCategory.xaml"
-            ((Projekt_WPF.views.addNewCategory)(target)).Loaded += new System.Windows.RoutedEventHandler(this.Window_Loaded);
+            ((Projekt_WPF.views.addwishNewCategory)(target)).Loaded += new System.Windows.RoutedEventHandler(this.Window_Loaded);
             
             #line default
             #line hidden

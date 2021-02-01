@@ -20,10 +20,15 @@ namespace Projekt_WPF.ViewModel
         public ObservableCollection<Category> categories { get; set; }
 
         [XmlArray]
-        [XmlArrayItem(typeof(Income)),
+        [XmlArrayItem(typeof(Entry)),
+            XmlArrayItem(typeof(Income)),
    XmlArrayItem(typeof(Outcome))]
+        
         public ObservableCollection<Entry> entries { get; set; }
         
+
+
+        //public List<Income> incomes { get; set; }
         [XmlArray]
         [XmlArrayItem(typeof(Summary))]
         public ObservableCollection<Summary> summaryList { get; set; }
@@ -36,7 +41,9 @@ namespace Projekt_WPF.ViewModel
         [XmlArrayItem(typeof(WishGroup))]
         public ObservableCollection<Category>wishgroups { get; set; }
   
-
+        [XmlArray]
+        [XmlArrayItem(typeof(Budget))]
+        public ObservableCollection<Budget> budget { get; set; }
       
 
         public MyViewModel()
@@ -45,7 +52,9 @@ namespace Projekt_WPF.ViewModel
             categories = new ObservableCollection<Category>();
             entries = new ObservableCollection<Entry>();
             summaryList = new ObservableCollection<Summary>();
-          
+            wishes = new ObservableCollection<Entry>();
+            wishgroups = new ObservableCollection<Category>();
+            budget = new ObservableCollection<Budget>();
             /*
             categories = new ObservableCollection<Category>( Category.readFromFile("kategorie.json")  );
             entries = new ObservableCollection<Entry>( Entry.readFromFile("wpisy.json") );
@@ -90,6 +99,35 @@ namespace Projekt_WPF.ViewModel
             
             
         }
+        public void addBudget(Budget b)
+        {
+            this.budget.Add(b);
+            this.budget.OrderBy(o => o.date);
+        }
+        public void editBudget(Budget b)
+        {
+           for(int i=0;i<budget.Count;i++)
+            {
+                if(budget[i].id==b.id)
+                {
+                    budget[i] = b;
+                    break;
+                }
+            }
+            this.budget.OrderBy(o => o.date);
+        }
+        public void deleteBudget(Budget b)
+        {
+            for (int i = 0; i < budget.Count; i++)
+            {
+                if (budget[i].id == b.id)
+                {
+                    budget.RemoveAt(i);
+                    break;
+                }
+            }
+            this.budget.OrderBy(o => o.date);
+        }
         public void deserialize(string filename)
         {
             FileStream fs = new FileStream(filename, FileMode.Open);
@@ -105,7 +143,7 @@ namespace Projekt_WPF.ViewModel
             this.wishgroups = mvm.wishgroups;
             this.summaryList = mvm.summaryList;
             //this.wishes = mvm.wishes;
-            
+            this.budget = mvm.budget;
         }
         
     }

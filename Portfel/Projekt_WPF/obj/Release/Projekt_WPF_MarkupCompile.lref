@@ -5,12 +5,12 @@ FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\Filters\
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\MainWindow.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\userControls\ButtonsListControl.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\userControls\creationgButtonsControl.xaml;;
-FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\userControls\DiagramControl.xaml;;
-FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\userControls\DiagramEntry.xaml;;
-FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\userControls\DiagramItemsSource.xaml;;
-FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\addNewCategory.xaml;;
+FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\AddBudget.xaml;;
+FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\addNewWishCategory.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\AddWishWindow.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\BudgetPage.xaml;;
+FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\ChartWindow.xaml;;
+FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\WishCategorypageView.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\SummareCreatePage.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\SummaryPage.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\UserControlCategories.xaml;;
@@ -22,5 +22,4 @@ FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\Wi
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\WindowEditEntry.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\WindowNewCategory.xaml;;
 FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\WindowNewEntry.xaml;;
-FC:\Users\Geoff\source\repos\WPF_KCK\29_1_21\kckgui\Portfel\Projekt_WPF\views\newCategorypageView.xaml;;
 

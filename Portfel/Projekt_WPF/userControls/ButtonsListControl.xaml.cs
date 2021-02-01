@@ -130,19 +130,6 @@ namespace Projekt_WPF.userControls
          
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-           
-        }
-
-        private void AddButton_Click(object sender, RoutedEventArgs e)
-        {
-            //AddProperty.Execute(1);
-        }
-
-        private void editButton_Click(object sender, RoutedEventArgs e)
-        {
-            AddProperty.Execute(1);
-        }
+      
     }
 }

@@ -1,7 +1,7 @@
 ﻿using NodaTime;
 using Projekt_WPF.commands;
 using Projekt_WPF.models;
-using Projekt_WPF.models.patterns.factoryMethodEntry;
+
 using Projekt_WPF.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -45,16 +45,18 @@ namespace Projekt_WPF.views
         public void newEntryCmd()
         {
             //var temp = new WindowNewEntry(vm);
-            var temp = new AddWishWindow(vm, new IncomeFactory());
+            var temp = new WindowNewEntry(vm);
             temp.ShowDialog();
         }
         public void editEntryCmd()
         {
+            if (isSelected() == false) return;
             var temp = new WindowEditEntry(vm,(Entry)entriesListBox.SelectedItem);
             temp.ShowDialog();
         }
         public void deleteEntryCmd()
         {
+            if (isSelected() == false) return;
             if (MessageBox.Show("Czy na pewno chcesz usunąć wpis wybrany wpis?", "Usuwanie wpisu", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 Entry tmp = (Entry)entriesListBox.SelectedItem;
@@ -62,17 +64,18 @@ namespace Projekt_WPF.views
             }
         }
 
-        private bool isSelected()
+        public bool isSelected()
         {
             if (entriesListBox.SelectedItem != null)
             {
                 return true;
             }
+            MessageBox.Show("nie wybrano żadnego elementu");
             return false;
         }
         private void addNewEntryButton_Click(object sender, RoutedEventArgs e)
         {
-            var temp = new AddWishWindow(vm, new IncomeFactory());
+            var temp = new WindowNewEntry(vm);
             temp.Show();
         }
         public void dodajWpis(Entry wpis)
@@ -150,23 +153,12 @@ namespace Projekt_WPF.views
             refreshView();
         }
 
-        private void entriesListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (entriesListBox.SelectedIndex >= 0)
-            {
-                editSelectedEntryButton.IsEnabled = true;
-                deleteSelectedEntryButton.IsEnabled = true;
-            }
-            else
-            {
-                editSelectedEntryButton.IsEnabled = false;
-                deleteSelectedEntryButton.IsEnabled = false;
-            }
-        }
-
+       
+       
         private void windowLoaded(object sender, RoutedEventArgs e)
         {
             // vm = new MyViewModel();
+            
             this.DataContext = vm;
            
             decimal minimumPrice;
@@ -226,39 +218,17 @@ namespace Projekt_WPF.views
                 return true;
             };
             newEntryCMD = new CommandTemplate(o => newEntryCmd(), o => true);
-            KeyBinding keyBindingnew = new KeyBinding
-            {
-                Command = newEntryCMD,
-                Key = Key.N,
-                Modifiers = ModifierKeys.Control
-
-            };
-            this.InputBindings.Add(keyBindingnew);
-
-
+           
+            
             editEntryCMD = new CommandTemplate(o => editEntryCmd(), o =>
-
-                isSelected()
+            true
 
             );
-            KeyBinding keyBindingedit = new KeyBinding
-            {
-                Command = editEntryCMD,
-                Key = Key.E,
-                Modifiers = ModifierKeys.Control
-
-            };
-            this.InputBindings.Add(keyBindingedit);
-
-            deleteEntryCMD = new CommandTemplate(o => deleteEntryCmd(), o => isSelected());
-            KeyBinding keyBindingdelete = new KeyBinding
-            {
-                Command = deleteEntryCMD,
-                Key = Key.X,
-                Modifiers = ModifierKeys.Control
-            };
-            this.InputBindings.Add(keyBindingdelete);
-
+           
+            deleteEntryCMD = new CommandTemplate(o => deleteEntryCmd(), o => true);
+            menubuttons.AddProperty = newEntryCMD;
+            menubuttons.EditProperty = editEntryCMD;
+            menubuttons.DeleteProperty = deleteEntryCMD;
         }
         private void refreshView()
         {

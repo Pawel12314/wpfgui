@@ -11,8 +11,8 @@ namespace Projekt_WPF.models
     {
         public LocalDate begin { get; set; }
         public LocalDate end { get; set; }
-
-
+        public static int maxID { get; set; }
+        public int duration { get; set; }
         public WishGroup()
         {
 
@@ -21,6 +21,8 @@ namespace Projekt_WPF.models
         {
             this.begin = begin;
             this.end = begin.PlusMonths(duration);
+            this.id = ++maxID;
+            this.duration = duration;
         }
     }
 }

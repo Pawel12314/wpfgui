@@ -90,6 +90,7 @@
     </Compile>
     <Compile Include="conversion2\ColumnDiagramConversion.cs" />
     <Compile Include="conversion2\EntryTypeConverter.cs" />
+    <Compile Include="conversion2\TypeFilter.cs" />
     <Compile Include="Filters\DateWishFilter.xaml.cs">
       <DependentUpon>DateWishFilter.xaml</DependentUpon>
     </Compile>
@@ -100,26 +101,6 @@
     <Compile Include="models\Element.cs" />
     <Compile Include="models\Category.cs" />
     <Compile Include="models\Income.cs" />
-    <Compile Include="models\patterns\CategoryPatterns\CategoryDecoratorCreator.cs" />
-    <Compile Include="models\patterns\CategoryPatterns\CategoryItemCreator.cs" />
-    <Compile Include="models\patterns\CategoryPatterns\categoryPage\FactoryCategoryPage.cs" />
-    <Compile Include="models\patterns\CategoryPatterns\categoryPage\FactoryWishCategoryPage.cs" />
-    <Compile Include="models\patterns\CategoryPatterns\categoryPage\IfactoryCategoryPage.cs" />
-    <Compile Include="models\patterns\CategoryPatterns\FactoryMethod\FactoryCategoryCreator.cs" />
-    <Compile Include="models\patterns\CategoryPatterns\FactoryMethod\FactoryWishGroupCreator.cs" />
-    <Compile Include="models\patterns\CategoryPatterns\FactoryMethod\IFactoryCategoryCreator.cs" />
-    <Compile Include="models\patterns\CategoryPatterns\ICategoryCreator.cs" />
-    <Compile Include="models\patterns\CategoryPatterns\ICategoryDecoratorCreator.cs" />
-    <Compile Include="models\patterns\CategoryPatterns\WishDecoratorCreator.cs" />
-    <Compile Include="models\patterns\Decorator\CategoryEmptyDecorated.cs" />
-    <Compile Include="models\patterns\Decorator\EntryCategory.cs" />
-    <Compile Include="models\patterns\Decorator\ICategory.cs" />
-    <Compile Include="models\patterns\Decorator\ICategoryBase.cs" />
-    <Compile Include="models\patterns\Decorator\WishCategory.cs" />
-    <Compile Include="models\patterns\factoryMethodEntry\IEntryFactory.cs" />
-    <Compile Include="models\patterns\factoryMethodEntry\IncomeFactory.cs" />
-    <Compile Include="models\patterns\factoryMethodEntry\OutcomeFactory.cs" />
-    <Compile Include="models\patterns\factoryMethodEntry\WishFactory.cs" />
     <Compile Include="models\range\implementedValue.cs" />
     <Compile Include="models\range\Range.cs" />
     <Compile Include="models\range\UnimplementedValue.cs" />
@@ -142,19 +123,13 @@
     <Compile Include="userControls\creationgButtonsControl.xaml.cs">
       <DependentUpon>creationgButtonsControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="userControls\DiagramControl.xaml.cs">
-      <DependentUpon>DiagramControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="userControls\DiagramEntry.xaml.cs">
-      <DependentUpon>DiagramEntry.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="userControls\DiagramItemsSource.xaml.cs">
-      <DependentUpon>DiagramItemsSource.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModel\MyViewModel.cs" />
     <Compile Include="globalSettings\DatePickerCalendar.cs" />
-    <Compile Include="views\addNewCategory.xaml.cs">
-      <DependentUpon>addNewCategory.xaml</DependentUpon>
+    <Compile Include="views\AddBudget.xaml.cs">
+      <DependentUpon>AddBudget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\addNewWishCategory.xaml.cs">
+      <DependentUpon>addNewWishCategory.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\AddWishWindow.xaml.cs">
       <DependentUpon>AddWishWindow.xaml</DependentUpon>
@@ -162,8 +137,11 @@
     <Compile Include="views\BudgetPage.xaml.cs">
       <DependentUpon>BudgetPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="views\newCategorypageView.xaml.cs">
-      <DependentUpon>newCategorypageView.xaml</DependentUpon>
+    <Compile Include="views\ChartWindow.xaml.cs">
+      <DependentUpon>ChartWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\WishCategorypageView.xaml.cs">
+      <DependentUpon>WishCategorypageView.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\SummareCreatePage.xaml.cs">
       <DependentUpon>SummareCreatePage.xaml</DependentUpon>
@@ -226,19 +204,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="userControls\DiagramControl.xaml">
+    <Page Include="views\AddBudget.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="userControls\DiagramEntry.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="userControls\DiagramItemsSource.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="views\addNewCategory.xaml">
+    <Page Include="views\addNewWishCategory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -250,7 +220,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="views\newCategorypageView.xaml">
+    <Page Include="views\ChartWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\WishCategorypageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

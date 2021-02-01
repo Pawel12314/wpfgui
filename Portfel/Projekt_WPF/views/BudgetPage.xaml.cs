@@ -1,7 +1,6 @@
 ﻿using Projekt_WPF.commands;
 using Projekt_WPF.models;
-using Projekt_WPF.models.patterns.CategoryPatterns.FactoryMethod;
-using Projekt_WPF.models.patterns.factoryMethodEntry;
+
 using Projekt_WPF.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -32,7 +31,8 @@ namespace Projekt_WPF.views
         private ICommand addCMD { get; set; }
         private ICommand editCMD { get; set; }
         private ICommand deleteCMD { get; set; }
-        private ICollectionView view { get; set; }
+        private ICollectionView viewgroups { get; set; }
+        private ICollectionView viewwishes { get; set; }
 
         private ICommand add { get; set; }
         public BudgetPage(MyViewModel vm)
@@ -42,25 +42,30 @@ namespace Projekt_WPF.views
         }
         public void  openAddmenuWish()
         {
-            var dialog = new addNewCategory(new FactoryWishGroupCreator());
+            var dialog = new addwishNewCategory(null);
             dialog.Show();
         }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             //definedWishesListBox.ItemsSource = vm.wishes;
-            wishesListbox.ItemsSource = vm.wishgroups;
+            wishesgroupsListbox.ItemsSource = vm.wishgroups;
+
+            wishesListbox.ItemsSource = vm.wishes;
+
             add = new CommandTemplate(o => addWishButton_Click(),o => true);
             menuButtons.AddProperty = add;
-            view =
-            CollectionViewSource.GetDefaultView(wishesListbox.ItemsSource);
-            view.Filter = FilterDate;
+            viewgroups =
+            CollectionViewSource.GetDefaultView(wishesgroupsListbox.ItemsSource);
+            viewgroups.Filter = FilterDate;
+            viewwishes = CollectionViewSource.GetDefaultView(wishesListbox.ItemsSource);
+            viewwishes.Filter = FilterWishGroup;
 
             addCMD = new CommandTemplate(o => openAddmenuWish(), o => true);
         }
 
         private void addWishButton_Click()
         {
-            var aww = new AddWishWindow(vm,new WishFactory());
+            var aww = new AddWishWindow(vm);
             aww.Show();
         }
         public void addWish(Entry w)
@@ -69,7 +74,18 @@ namespace Projekt_WPF.views
             //definedWishesListBox.Items.Refresh();
             wishesListbox.Items.Refresh();
         }
+        public bool FilterWishGroup(Object item)
+        {
 
+
+            Wish w = (Wish)item;
+            if(w.groupID==((WishGroup)wishesgroupsListbox.SelectedItem).id)
+            {
+                return true;
+
+            }
+            return false;
+        }
         public bool FilterDate(Object item)
         {
             WishGroup e = (WishGroup)item;
@@ -113,8 +129,14 @@ namespace Projekt_WPF.views
                 tb.Text = tb.Text.Remove(tb.Text.Length - 1);
                     tb.SelectionStart = tb.Text.Length;
             }
-            if (this.view != null)
-                view.Refresh();
+            if (this.viewgroups != null)
+                viewgroups.Refresh();
+        }
+
+        private void wishesgroupsListbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            viewwishes.Refresh();
+            //MessageBox.Show(((WishGroup)wishesgroupsListbox.SelectedItem).id.ToString()+" selected id");
         }
     }
 }

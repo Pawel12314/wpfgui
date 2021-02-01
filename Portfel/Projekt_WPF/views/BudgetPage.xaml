@@ -24,8 +24,12 @@
             <GroupBox Header="miesiąc">
                 <TextBox Name="monthTextBox" TextChanged="filternumbers"></TextBox>
             </GroupBox>
-
-            <ListBox DockPanel.Dock="Top" Name="wishesListbox" MinHeight="200">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ListBox Grid.Column="0" Name="wishesgroupsListbox" MinHeight="200" SelectionChanged="wishesgroupsListbox_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -37,6 +41,20 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+                <ListBox Grid.Column="1" Name="wishesListbox" MinHeight="200">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding name}"></TextBlock>
+                                <TextBlock Text="{Binding amount}"></TextBlock>
+                                
+                            </StackPanel>
+
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+           
             <mycontrols:ButtonsListControl MyWidthProperty="250" MyHeightProperty="100" x:Name="menuButtons" OrientationProperty="Horizontal" ></mycontrols:ButtonsListControl>
         </StackPanel>
 

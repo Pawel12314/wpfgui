@@ -1,8 +1,6 @@
 ﻿using NodaTime;
 using Projekt_WPF.models;
-using Projekt_WPF.models.patterns.CategoryClass;
-using Projekt_WPF.models.patterns.Decorator;
-using Projekt_WPF.models.patterns.factoryMethodEntry;
+
 using Projekt_WPF.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -28,27 +26,29 @@ namespace Projekt_WPF.views
     public partial class AddWishWindow : Window
     {
 
-        private IEntryFactory entryFactory { get; set; }
+        
         private MyViewModel viewModel { get; set; }
-        public AddWishWindow(MyViewModel vm, IEntryFactory entryFactory)
+        private int id { get; set; }
+        public AddWishWindow(MyViewModel vm,Wish w=null)
         {
-            this.entryFactory = entryFactory;
+            
             this.viewModel = vm;
             InitializeComponent();
+            id = -1;
+            if(w!=null)
+            {
+                nameTextBox.Text = w.name;
+                durationTextBox.Text = w.duration.ToString();
+                categoryCombobox.SelectedItem = w.category;
+                beginDatePicker.SelectedDate = new DateTime(w.begin.Year, w.begin.Month, w.begin.Day);
+                id = w.id;
+            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             categoryCombobox.ItemsSource = viewModel.categories;
-            if(entryFactory is WishFactory)
-            {
-                wishMenu.Visibility = Visibility.Visible;
-                wishCategoryCombobox.ItemsSource = viewModel.wishgroups;
-            }
-            else
-            {
-                wishMenu.Visibility = Visibility.Collapsed;
-            }
+          
         }
 
         
@@ -58,7 +58,7 @@ namespace Projekt_WPF.views
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
             Entry wish;
-            WishDate wishdate;
+            //WishDate wishdate;
             LocalDate begin = new LocalDate();
             
             if(nameTextBox.Text=="")
@@ -75,7 +75,7 @@ namespace Projekt_WPF.views
             String description = DescriptionTextBox.Text;
             if(isPeriodDefined.IsChecked==false)
             {
-                wishdate = WishDate.notspecified;
+                //wishdate = WishDate.notspecified;
             }
             else
             {
@@ -89,7 +89,7 @@ namespace Projekt_WPF.views
                     return;
                 }
                 
-                wishdate = WishDate.specified;
+               // wishdate = WishDate.specified;
             }
             //if()
             int duration=0;
@@ -114,25 +114,24 @@ namespace Projekt_WPF.views
                 return;
             }
             Category category = (Category)categoryCombobox.SelectedItem;
-            ICategoryBase ICat = new EntryCategory(ref category, new CategoryEmptyDecorated());
-            ICategoryBase catres = ICat;
-            if (entryFactory is WishFactory)
+
+            WishGroup group;// = new WishGroup();
+            
             if(wishCategoryCombobox.SelectedItem==null)
             {
                     MessageBox.Show("nie wybrano grupy");
                     return;
             }
-            else
-            {
-                    WishGroup group = (WishGroup)wishCategoryCombobox.SelectedItem;
-                    catres = new WishCategory(ref group,ref ICat);
-            }
-                      
+                 group = (WishGroup)wishCategoryCombobox.SelectedItem;
+                    
+            
 
-           
-            wish = entryFactory.createEntry(name, amount, description, catres, begin, duration);
-            //wish = new entryfa(name, amount,ref category, freq,begin, duration, description);
-            entryFactory.addElement(wish, (MainWindow)Application.Current.MainWindow);
+            wish = new Wish(name, amount, ref category,ref group, Frequency.comiesieczny, begin, duration, description);
+                       
+            
+
+            ((BudgetPage)((MainWindow)Application.Current.MainWindow).mainWindowFrame.Content).addWish(wish);
+            
             //((BudgetPage)((MainWindow)Application.Current.MainWindow).mainWindowFrame.Content).addWish(wish);
             this.Close();
         }

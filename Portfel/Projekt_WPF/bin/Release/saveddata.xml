@@ -3,70 +3,29 @@
   <categories>
     <Category>
       <id>1</id>
-      <name>domowe</name>
-    </Category>
-    <Category>
-      <id>1</id>
       <name>praca</name>
     </Category>
+    <Category>
+      <id>2</id>
+      <name>dom</name>
+    </Category>
   </categories>
-  <entries>
-    <Income>
-      <id>1</id>
-      <name>pralka</name>
-      <frequency>jednorazowy</frequency>
-      <amount>1500</amount>
-      <begin>2021-08-01</begin>
-      <end>2021-08-01</end>
-      <duration>0</duration>
-      <categoryID>1</categoryID>
-      <category>
-        <id>1</id>
-        <name>domowe</name>
-      </category>
-      <description />
-    </Income>
-    <Income>
-      <id>4</id>
-      <name>lodóka</name>
-      <frequency>jednorazowy</frequency>
-      <amount>1500</amount>
-      <begin>2021-02-01</begin>
-      <end>2021-02-01</end>
-      <duration>0</duration>
-      <categoryID>1</categoryID>
-      <category>
-        <id>1</id>
-        <name>domowe</name>
-      </category>
-      <description />
-    </Income>
-  </entries>
+  <entries />
   <summaryList />
-  <wishes>
-    <Wish>
-      <id>1</id>
-      <name>samochod</name>
-      <frequency>jednorazowy</frequency>
-      <amount>20000</amount>
-      <begin>2021-01-01</begin>
-      <end>2021-01-01</end>
-      <duration>0</duration>
-      <categoryID>1</categoryID>
-      <category>
-        <id>1</id>
-        <name>domowe</name>
-      </category>
-      <description />
-      <wishDate>notspecified</wishDate>
-    </Wish>
-  </wishes>
+  <wishes />
   <wishgroups>
     <WishGroup>
+      <id>1</id>
+      <name>prezent</name>
+      <begin>2021-07-01</begin>
+      <end>2022-07-01</end>
+    </WishGroup>
+    <WishGroup>
       <id>2</id>
-      <name>prezent dla mamy</name>
-      <begin>2021-01-01</begin>
-      <end>2021-03-01</end>
+      <name>samochod</name>
+      <begin>2021-03-01</begin>
+      <end>2022-03-01</end>
     </WishGroup>
   </wishgroups>
+  <budget />
 </MyViewModel>

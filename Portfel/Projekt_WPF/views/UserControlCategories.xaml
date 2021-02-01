@@ -32,23 +32,6 @@
                 <controls:ButtonsListControl OrientationProperty="Vertical" MyWidthProperty="200" MyHeightProperty="75" x:Name="menubuttons"></controls:ButtonsListControl>
             </Grid> 
         </Grid>
-        <!--
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*" MinWidth="150"/>
-            <ColumnDefinition Width="*" MinWidth="60"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-        </Grid.RowDefinitions>
-        <Label Content="Kategorie" Grid.Row="0" Grid.Column="0" Margin="5,15,5,5" HorizontalAlignment="Center"/>
-        <ListBox ItemsSource="{Binding kategorie}" x:Name="categoriesListBox" Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Margin="10,5" MinHeight="120" MaxHeight="700" SelectionChanged="categoriesListBox_SelectionChanged"/>
-        <Button  Style="{StaticResource Button}" x:Name="newCategoryButton" Content="dodaj..." Grid.Row="1" Grid.Column="1" Margin="5" Padding="5" MaxWidth="100" Click="newCategoryButton_Click"/>
-        <Button Style="{StaticResource Button}" x:Name="editCategoryButton" Content="edytuj" Grid.Row="2" Grid.Column="1" Margin="5" Padding="5" MaxWidth="100" IsEnabled="False" Click="editCategoryButton_Click"/>
-        <Button Style="{StaticResource deleteButton}" x:Name="deleteCategoryButton" Content="usuń" Grid.Row="3" Grid.Column="1" Margin="5" Padding="5" MaxWidth="100" IsEnabled="False" Click="deleteCategoryButton_Click"/>
     
-        -->
         </Grid>
 </Page>

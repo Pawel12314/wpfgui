@@ -1,0 +1,26 @@
+﻿<Window x:Class="Projekt_WPF.views.AddBudget"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_WPF.views"
+        mc:Ignorable="d"
+        Title="AddBudget" Height="450" Width="800"
+        xmlns:mn="clr-namespace:Projekt_WPF"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:controls="clr-namespace:Projekt_WPF.userControls"
+        Loaded="Window_Loaded"
+        >
+    <StackPanel>
+        <GroupBox Header="kwota">
+            <TextBox Name="amount" TextChanged="filterletters">
+                
+            </TextBox>
+            
+        </GroupBox>
+        <GroupBox Header="dataPoczątku">
+            <DatePicker SelectedDate="{x:Static sys:DateTime.Now}" x:Name="beginDatePicker" mn:DatePickerCalendar.IsMonthYear="True" mn:DatePickerDateFormat.DateFormat="MMM-yyyy" Text="MMM-yyyy" />
+        </GroupBox>
+        <controls:creationgButtonsControl x:Name="menubuttons" OrientationProperty="Horizontal" MyWidthProperty="200" MyHeightProperty="100"></controls:creationgButtonsControl>
+    </StackPanel>
+</Window>

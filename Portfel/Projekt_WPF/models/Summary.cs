@@ -86,7 +86,7 @@ namespace Projekt_WPF.models
                 summaries = JsonConvert.DeserializeObject<List<Summary>>(json, settings);
 
             }
-            catch (Exception e)
+            catch 
             {
 
                 summaries = new List<Summary>();

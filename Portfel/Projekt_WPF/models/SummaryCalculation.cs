@@ -95,7 +95,7 @@ namespace Projekt_WPF.models
                     item.add(sum);
                     maxcategory = Math.Max(item.amount, maxcategory);
                 }
-                catch(Exception e)
+                catch
                 {
                     SummaryItemCategory item = new SummaryItemCategory(p.category);
                     item.add(sum);
@@ -113,7 +113,7 @@ namespace Projekt_WPF.models
                     item.add(sum);
                     maxcategory = Math.Max(item.amount, maxcategory);
                 }
-                catch (Exception e)
+                catch 
                 {
                     SummaryItemCategory item = new SummaryItemCategory(w.category);
                     item.add(sum);
@@ -139,7 +139,7 @@ namespace Projekt_WPF.models
                     if (w.amount <=min) continue;
 
                 }
-                catch(Exception e)
+                catch
                 {
                    // MessageBox.Show("kwota jest zla CATCH");
                 }
@@ -148,7 +148,7 @@ namespace Projekt_WPF.models
                     decimal max = priceRange.getMax();
                     if (w.amount >= max) continue;
                 }
-                catch(Exception e)
+                catch
                 {
                    // MessageBox.Show("kwota jest zla CATCH");
                 }

@@ -13,8 +13,8 @@
     <Grid>
         <StackPanel Orientation="{Binding ElementName=control, Path=OrientationProperty}">
             <Button Command="{Binding AddProperty , ElementName=control}" Name="AddButton"  Margin="10" Width="{Binding Path = MyWidthProperty, ElementName=control}" Height="{Binding Path = MyHeightProperty, ElementName=control}"  Style="{StaticResource Button}">dodaj</Button>
-            <Button Name="editButton" Click="editButton_Click" Margin="10" Width="{Binding Path = MyWidthProperty, ElementName=control}" Height="{Binding Path = MyHeightProperty, ElementName=control}" Style="{StaticResource Button}">edytuj</Button>
-            <Button Margin="10" Width="{Binding Path = MyWidthProperty, ElementName=control}" Height="{Binding Path = MyHeightProperty, ElementName=control}" Style="{StaticResource deleteButton}">usuń</Button>
+            <Button  Command="{Binding EditProperty , ElementName=control}"  Name="editButton"  Margin="10" Width="{Binding Path = MyWidthProperty, ElementName=control}" Height="{Binding Path = MyHeightProperty, ElementName=control}" Style="{StaticResource Button}">edytuj</Button>
+            <Button Command="{Binding DeleteProperty, ElementName=control}" Margin="10" Width="{Binding Path = MyWidthProperty, ElementName=control}" Height="{Binding Path = MyHeightProperty, ElementName=control}" Style="{StaticResource deleteButton}">usuń</Button>
            
         </StackPanel>
 

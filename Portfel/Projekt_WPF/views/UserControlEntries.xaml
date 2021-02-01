@@ -12,6 +12,7 @@
              d:DesignHeight="800" d:DesignWidth="800"
              Loaded="windowLoaded"
       Name="entriesPage"
+      xmlns:control="clr-namespace:Projekt_WPF.userControls"
       >
     <Page.Resources>
         <convrtrs:ObjectToTypeConverter x:Key="typeConverter"/>
@@ -93,7 +94,7 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <ListBox x:Name="entriesListBox" Grid.Column="0" Margin="2" Grid.IsSharedSizeScope="True"  HorizontalContentAlignment="Stretch" SelectionChanged="entriesListBox_SelectionChanged"  ScrollViewer.VerticalScrollBarVisibility="Visible">
+                <ListBox x:Name="entriesListBox" Grid.Column="0" Margin="2" Grid.IsSharedSizeScope="True"  HorizontalContentAlignment="Stretch"  ScrollViewer.VerticalScrollBarVisibility="Visible">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Grid Background="{Binding Mode=OneWay, Converter={StaticResource mytypeConverter}}" MinWidth="400">
@@ -133,10 +134,10 @@
                 </StackPanel>
             </Grid>
 
-            <StackPanel  Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Style="{StaticResource Button}" x:Name="editSelectedEntryButton" Content="Edytuj" Margin="10,5" Padding="15,5" IsEnabled="False" Click="editSelectedEntryButton_Click"/>
-                <Button Style="{StaticResource deleteButton}" x:Name="deleteSelectedEntryButton" Content="Usuń" Margin="10,5" Padding="15,5" IsEnabled="False" Click="deleteSelectedEntryButton_Click"/>
-            </StackPanel>
+            
+            <control:ButtonsListControl x:Name="menubuttons" Grid.Row="1" OrientationProperty="Horizontal" HorizontalAlignment="Center" MyWidthProperty="200" MyHeightProperty="80">
+                
+            </control:ButtonsListControl>
             
         </Grid>
         

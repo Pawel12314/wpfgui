@@ -10,6 +10,14 @@
         
         WindowState="Maximized"
         >
+    <Border BorderThickness="5" CornerRadius="0,20,30,20"
+ BorderBrush="Brown" Background="LightYellow"
+ >
+
+
+        <Grid>
+            
+        
     <Grid x:Name="mainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -57,6 +65,8 @@
                     <MenuItem x:Name="menuITemBudget" Header="budżet" Click="menuITemBudget_Click"></MenuItem>
                     <MenuItem Name="newCategoeries" Header="nowe kategorie" Click="newCategoeries_Click"></MenuItem>
                     <MenuItem Name="newWishCategories" Header="kategorie Zyczen" Click="newWishCategories_Click"></MenuItem>
+                    <MenuItem Name="chartinout" Header="wykres przychodów i wydatków" Click="chartinout_Click"></MenuItem>
+                    <MenuItem Name="newbudget" Header="dodawanie budżetu" Click="newbudget_Click"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Opcje">
                     <MenuItem x:Name="menuItemViewPersonalization" Header="Personalizacja" Click="menuItemViewPersonalization_Click"></MenuItem>
@@ -79,5 +89,13 @@
         <Frame x:Name="mainWindowFrame" Grid.Row="2" NavigationUIVisibility="Hidden" MinHeight="100" MinWidth="100">
             
         </Frame>
+        
     </Grid>
+            
+        <Ellipse Height="20" Width="20" Margin="0,0,0,0"
+ HorizontalAlignment="Right" VerticalAlignment="Bottom"
+ Stroke="DarkGreen" StrokeThickness="3" Fill="LawnGreen"
+ Cursor="ScrollSE"/>
+        </Grid>
+    </Border>
 </Window>
