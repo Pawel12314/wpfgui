@@ -18,8 +18,8 @@
 
         <Grid>
             
-        
-    <Grid x:Name="mainGrid">
+
+            <Grid x:Name="mainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>

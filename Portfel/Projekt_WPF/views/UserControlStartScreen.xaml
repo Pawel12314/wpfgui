@@ -12,9 +12,9 @@
       Loaded="Page_Loaded"
              
       >
-    <StackPanel  x:Name="mainGrid" Background="GhostWhite">
-        
+    <Grid  x:Name="mainGrid"  >
+        <Image Source="/images/money.png"  Width="{Binding ActualWidth, ElementName=mainscreen}" Height="{Binding ElementName=mainscreen,Path=ActualHeight}" ></Image>
 
             
-    </StackPanel>
+    </Grid>
 </Page>
